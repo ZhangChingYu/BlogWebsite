@@ -1,13 +1,21 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url('https://fonts.googleapis.com/css2?family=Ledger&family=Lexend&family=Limelight&display=swap');
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+    --font-family: 'Limelight', 'cursive';
+    --font-cat: 'Ledger', serif;
+    --font-dragon: 'Lexend', sans-serif;
+
+    --color-cat-theme: #B8565B;
+    --color-cat-bg: #FCF7ED;
+    --color-cat-dark: #E3CAAE;
+    
+    --color-dragon-theme: #171F40;
+    --color-purple: #9B6DB4;
+    --color-blue: #5768D1;
+    --color-dragon-item: #B8C2EF;
+
+    --color-gradient: radial-gradient(124.58% 136.70% at -45.83% -20.97%, #B8C2EF 0%, #9B6DB4 100%);
+    --color-gradient-trans:linear-gradient(139deg, rgba(184, 194, 239, 0.29) 0%, rgba(155, 109, 180, 0.29) 100%);
+
+    --box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
