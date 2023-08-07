@@ -1,6 +1,6 @@
 import React from "react";
 import './whatsNew.css';
-import imgUrl from '../../assets/cat.png';
+import imgUrl from '../../../assets/cat.png';
 import { motion } from 'framer-motion';
 
 
