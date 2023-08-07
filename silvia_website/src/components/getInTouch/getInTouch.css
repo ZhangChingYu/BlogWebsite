@@ -11,6 +11,7 @@
     font-family: var(--font-family);
     color:black;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 .contact p {
