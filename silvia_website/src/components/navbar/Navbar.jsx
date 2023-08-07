@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import './navbar.css';
 import logoUrl from '../../assets/logo.png';
 import { Search } from '../../components';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [searchContent, setSearchContent] = useState("");
@@ -16,7 +17,7 @@ const Navbar = () => {
                 <p><a href="#latest">Latest</a></p>
                 <p><a href="#subscribe">Subscribe</a></p>
                 <p><a href="#contact">Contact</a></p>
-                <p><a href="#about">About</a></p>
+                <Link to="/about">About</Link>
             </div>
             <div className="navbar_search">
                 <Search inputHandler={setSearchContent}/>

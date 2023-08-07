@@ -9,3 +9,6 @@ The website is build React.js and Django, with MySQL database. It's a practice p
 4. cd nameOfproject
 5. npm install react-icons
 6. npm install framer-motion
+7. npm install react-router-dom
+
+* navigation: https://www.codeconcisely.com/posts/react-navigation/
