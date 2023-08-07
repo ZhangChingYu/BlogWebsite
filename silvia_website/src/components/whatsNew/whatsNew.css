@@ -80,7 +80,7 @@
     width: 80%;
     height:fit-content;
     font-family: var(--font-cat);
-    font-size: 16px;
+    font-size: 20px;
     color: #616161;
 }
 
@@ -107,10 +107,13 @@
     font-size: 16px;
 }
 
+.whatsnew_container_card_r3 p {
+    cursor: pointer;
+}
+
 .whatsnew_container_card_r3:last-child {
     font-family: var(--font-family);
     color: #616161;
-    cursor: pointer;
     font-size: 16px;
 }
 

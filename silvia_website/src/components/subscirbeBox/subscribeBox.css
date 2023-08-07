@@ -1,10 +1,10 @@
 .subscirbe_box {
     display: flex;
     flex-direction: column;
-    margin-top: 1rem;
-    width: 400px;
+    margin-top: 2rem;
+    width: 480px;
     background: #FFECC6;
-    padding: 2rem 1rem 0 1rem;
+    padding: 2rem 1rem 0.4rem 1rem;
     border-radius: 0 0 50px 50px;
     box-shadow: var(--box-shadow);
     justify-content: flex-start;
@@ -13,7 +13,7 @@
 
 .subscirbe_box h2 {
     font-family: var(--font-family);
-    font-size: 20px;
+    font-size: 24px;
     color: black;
     margin-bottom: 1rem;
     align-self: center;
@@ -23,10 +23,11 @@
 .subscirbe_box p {
     color: #616161;
     font-family: var(--font-cat);
-    width: 70%;
+    font-size: 20px;
+    width: 75%;
     align-self: center;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 
 .subscirbe_box input {
