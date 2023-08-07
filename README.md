@@ -10,5 +10,6 @@ The website is build React.js and Django, with MySQL database. It's a practice p
 5. npm install react-icons
 6. npm install framer-motion
 7. npm install react-router-dom
+8. npm install react-image-crop
 
 * navigation: https://www.codeconcisely.com/posts/react-navigation/
