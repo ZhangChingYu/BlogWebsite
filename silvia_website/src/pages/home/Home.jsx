@@ -1,6 +1,7 @@
 import React from "react";
 import './home.css';
-import { Navbar, GetInTouch, SubscribeBox, Theme, WhatsNew} from "../../components";
+import { Navbar, GetInTouch, Theme, WhatsNew} from "../../components";
+import { Subscribe } from '../../containers'
 
 
 const Home = () => {
@@ -9,7 +10,7 @@ const Home = () => {
             <Navbar />
             <Theme />
             <WhatsNew />
-            <SubscribeBox />
+            <Subscribe />
             <GetInTouch />
             <div className="home_footer">
                 <p>Copyright©2023 SilviaChang.</p>

@@ -1,0 +1,12 @@
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2.6rem;
+}
+
+.subscribe h1 {
+    font-family: var(--font-family);
+    color: black;
+}
