@@ -1,6 +1,6 @@
 import React from "react";
 import './home.css';
-import { Navbar, GetInTouch, Theme, WhatsNew} from "../../components";
+import { Navbar, GetInTouch, Theme, WhatsNew} from "../../components/home";
 import { Subscribe } from '../../containers'
 
 

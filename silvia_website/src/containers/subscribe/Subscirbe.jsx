@@ -1,6 +1,6 @@
 import React from "react";
 import './subscribe.css';
-import { SubscribeBox } from '../../components'
+import { SubscribeBox } from '../../components/home'
 
 const Subscribe = () => {
     return(
