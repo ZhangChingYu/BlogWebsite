@@ -4,16 +4,17 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    padding: 4rem;
+    padding: 4rem 10rem;
 }
 
 .intro_img {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 40%;
-    height: 640px;
+    width: 500px;
+    height: 600px;
     overflow:hidden;
 }
 
@@ -22,12 +23,15 @@
 }
 
 .intro_content {
-    width: 40%;
+    flex: 1;
+    width: 500px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     margin-left: 2rem;
+    overflow-y:scroll;
 }
 
 .intro_content h2{
