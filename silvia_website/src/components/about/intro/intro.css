@@ -5,7 +5,6 @@
     justify-content: center;
     align-items: flex-start;
     padding: 4rem;
-    box-shadow: var(--box-shadow);
 }
 
 .intro_img {
