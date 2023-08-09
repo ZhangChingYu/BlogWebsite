@@ -20,7 +20,7 @@
 
 .m_footer_subscribe {
     flex:1;
-    background: var(--color-cat-bg);
+    background: var(--color-cat-item);
     margin: 2rem;
     box-shadow: var(--box-shadow);
     display: flex;

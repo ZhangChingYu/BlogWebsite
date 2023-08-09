@@ -1,0 +1,109 @@
+.cat_itemN {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 20px;
+    background-color: white;
+    width: 300px;
+    height: 400px;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+}
+
+.cat_itemN_img {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    overflow: hidden;
+}
+
+.cat_itemN_img img {
+    height: 100%;
+}
+
+.cat_itemN_title {
+    flex:1;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+.cat_itemN_title p {
+    flex: 1;
+    word-break: break-all;
+    overflow-y: hidden;
+    font-family: var(--font-cat);
+    font-size: 16px;
+    color: black;
+    text-decoration-line: underline;
+}
+
+.cat_itemN_icon {
+    margin-left: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.cat_itemN_footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 5px 10px;
+}
+
+.cat_itemN_footer p {
+    font-family: var(--font-cat);
+    font-size: 12px;
+    color: #757575;
+}
+
+.cat_itmeN_footer_cate {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.cat_itmeN_footer_cate p {
+    margin-right: 4px;
+    font-family: var(--font-cat);
+    font-size: 14px;
+    color: var(--color-cat-theme);
+    cursor: pointer;
+}
+
+.cat_itemN_more {
+    position: absolute;
+    background: rgba(227, 202, 174, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 18rem;
+}
+
+.cat_itemN_more_item {
+    display: flex;
+    flex-direction: row;
+    padding: 0.4rem 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.cat_itemN_more_item p {
+    font-family: var(--font-cat);
+    font-size: 14px;
+    margin-left: 4px;
+    color:black;
+    text-decoration-line: none;
+}
+
+
+

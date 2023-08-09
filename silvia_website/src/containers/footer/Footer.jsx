@@ -4,10 +4,15 @@ import { FaFacebook, FaLine} from 'react-icons/fa'
 import { RiInstagramFill } from 'react-icons/ri'
 import { AiFillTwitterCircle } from 'react-icons/ai'
 
-const Footer = () => {
+const Footer = ({ background }) => {
+    var back = "white";
+    if(background!==undefined){
+        back = background;
+    }
+
     return(
-        <div className="m_footer">
-            <div className="m_footer_content">
+        <div className="m_footer" style={{background:back}}>
+            <div className="m_footer_content" style={{background:back}}>
                 <div className="m_footer_subscribe">
                     <h2>If You Would Like To Subscribe</h2>
                     <p>You can leave your email down below so we can notified you whenever there is a new post being updated.</p>
@@ -16,7 +21,7 @@ const Footer = () => {
                         <p>Subscribe</p>
                     </div>
                 </div>
-                <div className="m_footer_contact">
+                <div className="m_footer_contact" style={{background:back}}>
                     <h2>Get In Touch</h2>
                     <p>If you have something you want to share with me, you can send an email to the website’s mail box</p>
                     <p className="m_footer_contact_email">MySite@gmail.com</p>
