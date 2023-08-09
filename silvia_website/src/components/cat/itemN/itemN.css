@@ -95,6 +95,8 @@
     padding: 0.4rem 1rem;
     justify-content: flex-start;
     align-items: flex-start;
+    width: 140px;
+    height: 40px;
 }
 
 .cat_itemN_more_item p {

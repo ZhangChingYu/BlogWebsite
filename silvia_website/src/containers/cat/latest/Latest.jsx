@@ -6,7 +6,7 @@ const Latest = ({ Title }) => {
     return(
         <div className="cat_item_section">
             <div className="cat_item_section_header">
-                <h2>Latest</h2>
+                <h2>{Title}</h2>
                 <p>view more</p>
             </div>
             <div className="cat_item_content">

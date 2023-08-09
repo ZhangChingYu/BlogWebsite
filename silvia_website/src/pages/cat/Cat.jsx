@@ -1,6 +1,6 @@
 import React from "react";
 import './cat.css';
-import { Navbar, Header, Category, Highlight, Latest} from '../../containers/cat';
+import { Navbar, Header, Category, Latest} from '../../containers/cat';
 import { Footer } from '../../containers';
 
 const Cat = () =>{
@@ -9,8 +9,8 @@ const Cat = () =>{
         <div className="cat">
             <Navbar/>
             <Header />
-            <Latest />
-            <Highlight />
+            <Latest Title={"Latest"}/>
+            <Latest Title={"Highlights"}/>
             <Category />
             <Footer background={background}/>
         </div>
