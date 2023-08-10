@@ -1,7 +1,7 @@
 import React from "react";
 import './catLatest.css';
-import { Navbar, Header } from '../../containers/cat';
-import { ItemN, PageNext } from '../../components/cat';
+import { Navbar, Header, NineItems} from '../../containers/cat';
+import { PageNext } from '../../components/cat';
 import { Footer } from '../../containers';
 import { Link, useNavigate } from 'react-router-dom';
 import imgUrl from '../../assets/cakecover.JPG';
@@ -28,21 +28,7 @@ const CatLatest =() => {
                 </div>
             </div>
             <div className="cat_latest_item_section">
-                <div className="cat_latest_items">
-                    <ItemN />
-                    <ItemN />
-                    <ItemN />
-                </div>
-                <div className="cat_latest_items">
-                    <ItemN />
-                    <ItemN />
-                    <ItemN />
-                </div>
-                <div className="cat_latest_items">
-                    <ItemN />
-                    <ItemN />
-                    <ItemN />
-                </div>
+                <NineItems />
             </div>
             <div className="cat_latest_page">
                 <PageNext />

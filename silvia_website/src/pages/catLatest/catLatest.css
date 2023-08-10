@@ -65,3 +65,8 @@
 .cat_latest_header_img img {
     height: 100%;
 }
+
+.cat_latest_item_section {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
