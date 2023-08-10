@@ -7,6 +7,7 @@
 }
 
 .cat_latest_header {
+    background: white;
     padding: 2rem 14rem;
     display: flex;
     flex-direction: row;
@@ -15,7 +16,6 @@
 }
 
 .cat_latest_header_content {
-    background: white;
     flex: 1;
     height: 600px;
     display: flex;
@@ -69,4 +69,8 @@
 .cat_latest_item_section {
     margin-top: 2rem;
     margin-bottom: 4rem;
+}
+
+.cat_latest_page {
+    margin-bottom: 8rem;
 }
