@@ -25,7 +25,6 @@
 }
 
 .cat_item_section_header p {
-    width: 100%;
     text-align: end;
     font-family: var(--font-cat);
     font-size: 18px;
@@ -33,6 +32,15 @@
     color: #616161;
     text-decoration-line: underline;
     cursor: pointer;
+}
+
+.cat_item_section_link {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    cursor:default;
 }
 
 .cat_item_content {

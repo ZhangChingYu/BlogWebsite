@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom';
-import { Home, About, Cat } from './pages';
+import { Home, About, Cat, CatLatest } from './pages';
 import './index.css';
 
 const App = () => {
@@ -10,6 +10,7 @@ const App = () => {
         <Route path='/' element={<Home/>}/>
         <Route path='about' element={<About/>}/>
         <Route path='life' element={<Cat />}/>
+        <Route path='life/latest' element={<CatLatest />}/>
       </Routes>
     </div>
   )

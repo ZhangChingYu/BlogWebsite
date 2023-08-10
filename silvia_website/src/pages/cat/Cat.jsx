@@ -9,8 +9,8 @@ const Cat = () =>{
         <div className="cat">
             <Navbar/>
             <Header />
-            <Latest Title={"Latest"}/>
-            <Latest Title={"Highlights"}/>
+            <Latest Title={"Latest"} PageLink={'/life/latest'}/>
+            <Latest Title={"Highlights"} PageLink={'/life/highlight'}/>
             <Category />
             <Footer background={background}/>
         </div>
