@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './menu.css';
 import { motion } from 'framer-motion';
+import { Link } from "react-router-dom";
 
 const Menu = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -18,7 +19,7 @@ const Menu = () => {
                 <motion.p whileHover={{scale:1.1}} whileTap={{scale:0.95}}>Home</motion.p>
                 <motion.p whileHover={{scale:1.1}} whileTap={{scale:0.95}}>Latest</motion.p>
                 <motion.p whileHover={{scale:1.1}} whileTap={{scale:0.95}}>Highlights</motion.p>
-                <motion.p whileHover={{scale:1.1}} whileTap={{scale:0.95}}>Category</motion.p>
+                <Link to="/life/categories" style={{textDecoration:"none"}}><motion.p whileHover={{scale:1.1}} whileTap={{scale:0.95}}>Category</motion.p></Link>
                 <motion.p whileHover={{scale:1.1}} whileTap={{scale:0.95}}>Work</motion.p>
             </motion.div>:<></>}
         </div>
