@@ -11,7 +11,7 @@ const Cat = () =>{
     return(
         <div className="cat">
             <Navbar navigator={navigator}/>
-            <Header />
+            <Header Title={"My Life."}/>
             <Latest Title={"Latest"} PageLink={'/life/latest'}/>
             <Latest Title={"Highlights"} PageLink={'/life/highlight'}/>
             <Category />
