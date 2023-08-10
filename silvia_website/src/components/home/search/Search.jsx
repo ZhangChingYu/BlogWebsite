@@ -1,15 +1,20 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaSearch } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 import './search.css';
 
 const Search = ({ inputHandler }) => {
+    const navigator = useNavigate();
     const [showInput, setShowInput] = useState(false);
     const [inputValue, setInputValue] = useState("");
     const searchHandler = () =>{
         if(showInput){
             inputHandler(inputValue);
             setInputValue("");
+        }
+        if(inputValue!==""){
+            navigator("search");
         }
         setShowInput(!showInput);
     }

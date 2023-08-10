@@ -22,13 +22,13 @@ const PageNext = () => {
         <div className="cat_page_next">
             <MdNavigateBefore size={40} className="cat_page_next_" color={preState?"var(--color-cat-theme)":"#969696"} onClick={prePageHandler}/>
             <div className="cat_page_next_numbers">
-                <div className="cat_page_next_number" style={{background:atPage===1?"var(--color-cat-theme)":"var(--color-cat-bg)"}}>
+                <div className="cat_page_next_number" style={{background:atPage===1?"var(--color-cat-theme)":"#ffffff00"}}>
                     <p style={{color:atPage===1?"white":"var(--color-cat-theme)"}}>1</p>
                 </div>
-                <div className="cat_page_next_number" style={{background:atPage===2?"var(--color-cat-theme)":"var(--color-cat-bg)"}}>
+                <div className="cat_page_next_number" style={{background:atPage===2?"var(--color-cat-theme)":"#ffffff00"}}>
                     <p style={{color:atPage===2?"white":"var(--color-cat-theme)"}}>2</p>
                 </div>
-                <div className="cat_page_next_number" style={{background:atPage===3?"var(--color-cat-theme)":"var(--color-cat-bg)"}}>
+                <div className="cat_page_next_number" style={{background:atPage===3?"var(--color-cat-theme)":"#ffffff00"}}>
                     <p style={{color:atPage===3?"white":"var(--color-cat-theme)"}}>3</p>
                 </div>
             </div>
