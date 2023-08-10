@@ -15,6 +15,7 @@
 }
 
 .cat_categories_body h2 {
+    margin-top: 4rem;
     font-family: var(--font-family);
     font-size: 30px;
     color: black;
