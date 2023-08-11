@@ -10,10 +10,10 @@ const Cat = () =>{
     const background = "var(--color-cat-bg)";
     return(
         <div className="cat">
-            <Navbar navigator={navigator}/>
+            <Navbar navigator={navigator}/> 
             <Header Title={"My Life."}/>
             <Latest Title={"Latest"} PageLink={'/life/latest'}/>
-            <Latest Title={"Highlights"} PageLink={'/life/highlight'}/>
+            <Latest Title={"Highlights"} PageLink={'/life/latest'}/>
             <Category />
             <Footer background={background}/>
         </div>
