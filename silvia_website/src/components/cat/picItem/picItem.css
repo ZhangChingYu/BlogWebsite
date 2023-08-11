@@ -1,0 +1,24 @@
+.cat_picItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cat_picItem_img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: var(--color-cat-bg);
+}
+
+.cat_picItem p {
+    margin-top: 4px;
+    font-family: var(--font-cat);
+    font-size: 14px;
+    color: #616161;
+    max-width: 600px;
+    text-align: center;
+}
