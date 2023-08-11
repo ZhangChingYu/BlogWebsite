@@ -1,6 +1,6 @@
 import React from "react";
 import './catArticle.css';
-import { ArticleNavbar, ArticleHeaderA, ArticleSectionB } from '../../containers/cat';
+import { ArticleNavbar, ArticleHeaderA, ArticleSectionC } from '../../containers/cat';
 import { Footer } from '../../containers';
 
 const CatArticle = () => {
@@ -8,7 +8,7 @@ const CatArticle = () => {
         <div className="cat_article">
             <ArticleNavbar />
             <ArticleHeaderA />
-            <ArticleSectionB />
+            <ArticleSectionC />
             <Footer />
         </div>
     )
