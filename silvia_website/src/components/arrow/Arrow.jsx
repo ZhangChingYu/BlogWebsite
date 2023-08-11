@@ -3,10 +3,10 @@ import './arrow.css';
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
 
-const Arrow = ({PagePath, color}) => {
+const Arrow = ({category, color}) => {
     return(
         <motion.div animate={{x:[0, 10, -4, 6, 0]}} transition={{type:"tween", duration:1, delay:0.4}}>
-        <Link className="arrow">
+        <Link className="arrow" to={"/life/category"} state={{category:category}}>
             <motion.div className="arrow_upper_line" animate={{}} style={{background:color}}>
 
             </motion.div>

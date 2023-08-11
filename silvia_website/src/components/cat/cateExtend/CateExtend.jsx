@@ -19,7 +19,7 @@ const CateExtend = ({name, color}) => {
                     <p>Here I’ve share some of my personal experiences that I think might be helpful to someone that encountering similar situation. Welcome to check out on them!</p>
                 </div>
                 <div className="cat_extendItem_hideBox_btn">
-                    <Arrow PagePath={""} color={mainColor}/>
+                    <Arrow category={name} color={mainColor}/>
                 </div>
             </motion.div>:<></>}
         </div>
