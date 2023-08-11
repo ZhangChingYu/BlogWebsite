@@ -5,3 +5,21 @@
     justify-content: flex-start;
     align-items: center;
 }
+
+.cat_article_category_text {
+    font-family: var(--font-family);
+    font-size: 30px;
+    color:black;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cat_article_categories {
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 8rem;
+}

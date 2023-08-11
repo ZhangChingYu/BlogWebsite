@@ -7,10 +7,14 @@
     border-radius: 50px;
     box-shadow: var(--box-shadow);
     cursor: pointer;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .cat_cateItem p {
     font-family: var(--font-cat);
     font-size: 20px;
     color: white;
+    text-align: center;
 }
