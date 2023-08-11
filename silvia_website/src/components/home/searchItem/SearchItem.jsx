@@ -3,6 +3,7 @@ import './searchItem.css';
 import imgUrl from '../../../assets/postimg.jpeg';
 import { BsThreeDots} from 'react-icons/bs';
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const SearchItem = ({title, content, category, date}) => {
     return(
@@ -20,8 +21,8 @@ const SearchItem = ({title, content, category, date}) => {
                 <p className="home_search_item_intro">Here I’ve share some of my personal experiences that I think might be helpful to someone that encountering similar situation. Welcome to check out on them!</p>
                 <div className="home_search_item_footer">
                     <div className="home_search_item_footer_cate">
-                        <p>#Baking</p>
-                        <p>#Life</p>
+                        <Link to={"/life/category"} state={{category:"Baking"}} style={{textDecorationLine:"none", color:"var(--color-cat-theme)"}}><p>#Baking</p></Link>
+                        <Link to={"/life/category"} state={{category:"Life"}} style={{textDecorationLine:"none", color:"var(--color-cat-theme)"}}><p>#Life</p></Link>
                     </div>
                     <p>2023/08/02</p>
                 </div>

@@ -3,7 +3,7 @@ import './search.css';
 import { Navbar } from '../../components';
 import { SearchItem } from '../../components/home';
 import { Footer } from '../../containers';
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate, useLocation } from "react-router-dom"; 
 import { PageNext } from '../../components/cat';
 
 const Search = () => {

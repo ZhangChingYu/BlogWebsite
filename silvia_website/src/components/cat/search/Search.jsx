@@ -2,9 +2,10 @@ import React, {useState} from "react";
 import './search.css';
 import { FaSearch } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Search = ({ inputHandler }) =>{
-
+    const navigator = useNavigate();
     const [showInput, setShowInput] = useState(false);
     const [inputValue, setInputValue] = useState("");
     const searchHandler = () =>{
@@ -13,6 +14,9 @@ const Search = ({ inputHandler }) =>{
             setInputValue("");
         }
         setShowInput(!showInput);
+        if(inputValue!==""){
+            navigator("/search");
+        }
     }
 
     return(

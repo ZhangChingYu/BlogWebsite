@@ -3,6 +3,7 @@ import './itemN.css';
 import { BsThreeDots} from 'react-icons/bs';
 import { RiShareBoxLine, RiFileCopyLine } from 'react-icons/ri';
 import { motion } from 'framer-motion';
+import { Link } from "react-router-dom";
 import imgUrl from '../../../assets/postimg.jpeg';
 
 const ItemN = ({title, category, date, imgPath, postId}) => {
@@ -37,8 +38,8 @@ const ItemN = ({title, category, date, imgPath, postId}) => {
             </div>
             <div className="cat_itemN_footer">
                 <div className="cat_itmeN_footer_cate">
-                    <p>#Baking</p>
-                    <p>#Life</p>
+                    <Link to={"/life/category"} state={{category:"Baking"}} style={{textDecorationLine:"none", color:"var(--color-cat-theme)"}}><p>#Baking</p></Link>
+                    <Link to={"/life/category"} state={{category:"Life"}} style={{textDecorationLine:"none", color:"var(--color-cat-theme)"}}><p>#Life</p></Link>
                 </div>
                 <p>2023/08/02</p>
             </div>
