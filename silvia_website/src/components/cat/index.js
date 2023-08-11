@@ -5,3 +5,4 @@ export { default as CateItem } from './cateItem/CateItem';
 export { default as PageNext } from './pageNext/PageNext';
 export { default as CateExtend } from './cateExtend/CateExtend';
 export { default as PictureItem } from './picItem/PicItem';
+export { default as ShareButton } from './shareButton/ShareButton';

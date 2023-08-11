@@ -10,8 +10,8 @@
 .cat_headerA_share {
     width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
     align-items: center;
     margin-bottom: 4rem;
 }
@@ -19,6 +19,7 @@
 .cat_headerA_share_icon {
     color: black;
     cursor: pointer;
+    margin-right: 1rem;
 }
 
 .cat_headerA h2 {
@@ -27,6 +28,7 @@
     font-family: var(--font-family);
     font-size: 30px;
     color: black;
+    background: white;
 }
 
 .cat_headerA p {
@@ -57,4 +59,21 @@
 
 .cat_headerA_img img {
     height: 100%;
+}
+
+.cat_headerA_shareBox {
+    background: var(--color-cat-item);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    margin-right: 1rem;
+}
+
+.cat_headerA_share_item {
+    cursor: pointer;
+    margin: 0 3px;
+    color: black;
 }
