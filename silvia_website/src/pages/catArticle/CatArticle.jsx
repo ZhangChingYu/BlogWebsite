@@ -1,9 +1,16 @@
 import React from "react";
 import './catArticle.css';
+import { ArticleNavbar, ArticleHeaderA, ArticleHeaderB } from '../../containers/cat';
+import { Footer } from '../../containers';
 
 const CatArticle = () => {
     return(
-        <div>Cat Article Page</div>
+        <div className="cat_article">
+            <ArticleNavbar />
+            <ArticleHeaderA />
+            <ArticleHeaderB />
+            <Footer />
+        </div>
     )
 }
 
