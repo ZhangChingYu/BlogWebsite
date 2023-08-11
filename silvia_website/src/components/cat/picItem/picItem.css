@@ -14,7 +14,7 @@
     background: var(--color-cat-bg);
 }
 
-.cat_picItem p {
+.cat_picItem p.cat_picItem_discribtion { 
     margin-top: 4px;
     font-family: var(--font-cat);
     font-size: 14px;

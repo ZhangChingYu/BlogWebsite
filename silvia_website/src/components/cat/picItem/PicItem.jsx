@@ -22,7 +22,7 @@ const PictureItem = ({fileName, Width, Height, discription, fixType}) => {
             <div className="cat_picItem_img" style={{width:picWidth, height:picHeight}}>
                 <img src={p} alt="" style={{height:picHFix, width:picWFix}}/>
             </div>
-            <p>{discription}</p>
+            <p className="cat_picItem_discribtion">{discription}</p>
         </div>
     )
 }
