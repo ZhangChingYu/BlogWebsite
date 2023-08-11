@@ -24,7 +24,7 @@ const CatLatest =() => {
                         </div>
                         <div className="cat_latest_header_link">
                             <div></div>
-                            <Link><p>view more</p></Link>
+                            <Link to="/life/article"><p>view more</p></Link>
                         </div>
                     </div>
                     <div className="cat_latest_header_img">

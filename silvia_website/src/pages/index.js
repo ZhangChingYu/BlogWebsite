@@ -5,3 +5,4 @@ export {default as CatLatest} from './catLatest/CatLatest';
 export {default as CatCategories} from './catCategories/CatCategories';
 export {default as Search} from './search/Search'; 
 export {default as CatCategory} from './catCategory/CatCategory';
+export {default as CatArticle} from './catArticle/CatArticle';
