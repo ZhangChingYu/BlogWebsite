@@ -16,7 +16,7 @@ const Cube = ({Title, imgFile, Color, Weight, Top}) => {
                 {imgFile!==undefined?
                 <motion.img 
                 src={imgFile} alt="" 
-                animate={{y:hover?-20:0, scale:hover?1.02:1}} transition={{duration:0.3, type:"tween"}} initial={{h:0, scale:1}}/>
+                animate={{y:hover?-20:0, scale:hover?1.02:1}} transition={{duration:0.3, type:"tween"}} initial={{h:0, scale:0}}/>
                 :<></>}
             </div>
         </div>

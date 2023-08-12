@@ -1,0 +1,64 @@
+.dragon_latestSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.dragon_latestSection h2 {
+    font-family: var(--font-family);
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.dragon_latestSection_cube {
+    background-color: #CEF3FF;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 70%;
+    border-radius: 30px;
+}
+
+.dragon_latestSection_img {
+    flex: 2;
+    height: 300px;
+    border-radius: 30px 0px 0px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 4rem;
+}
+
+.dragon_latestSection_img img {
+    height: 300px;
+}
+
+.dragon_latestSection_context {
+    flex: 1;
+    background: rgba(23, 31, 64, 0.87);
+    border-radius: 0px 30px 30px 0px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.dragon_latestSection_context p {
+    font-family: var(--font-dragon);
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
