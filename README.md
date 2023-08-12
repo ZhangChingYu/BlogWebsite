@@ -13,3 +13,4 @@ The website is build React.js and Django, with MySQL database. It's a practice p
 8. npm install react-image-crop
 
 * navigation: https://www.codeconcisely.com/posts/react-navigation/
+* icon picture: https://www.flaticon.com/search?word=app
