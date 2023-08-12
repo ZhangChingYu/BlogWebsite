@@ -15,7 +15,7 @@ const Search = ({ inputHandler }) =>{
         }
         setShowInput(!showInput);
         if(inputValue!==""){
-            navigator("/search");
+            navigator("/search", { state: { keyword:inputValue } });
         }
     }
 

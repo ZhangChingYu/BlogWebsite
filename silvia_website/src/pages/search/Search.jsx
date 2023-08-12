@@ -8,8 +8,10 @@ import { PageNext } from '../../components/cat';
 
 const Search = () => {
     const navigator = useNavigate();
+    const location = useLocation();
+    const data = location.state;
     const [input, setInput] = useState("");
-    const [keyword, setKeyword] = useState(" ");
+    const [keyword, setKeyword] = useState(data.keyword);
     const searchHandler = () => {
         if(input===" "){
             setKeyword("");
