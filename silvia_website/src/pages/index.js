@@ -6,3 +6,4 @@ export {default as CatCategories} from './catCategories/CatCategories';
 export {default as Search} from './search/Search'; 
 export {default as CatCategory} from './catCategory/CatCategory';
 export {default as CatArticle} from './catArticle/CatArticle';
+export {default as Dragon} from './dragon/Dragon';

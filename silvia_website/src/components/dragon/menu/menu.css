@@ -1,4 +1,4 @@
-.cat_menu {
+.dragon_menu {
     flex:1;
     display: flex;
     flex-direction: column;
@@ -6,7 +6,7 @@
     align-items: flex-start;
 }
 
-.cat_menu_icon {
+.dragon_menu_icon {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -14,29 +14,29 @@
     cursor: pointer;
 }
 
-.cat_menu_icon div {
-    background: black;
+.dragon_menu_icon div {
+    background: radial-gradient(124.58% 136.70% at -45.83% -20.97%, #B8C2EF 0%, #9B6DB4 100%);
     padding: 2px 16px;
     margin:3px;
     border-radius: 5px;
 }
 
-.cat_menu_content {
+.dragon_menu_content {
     top: 3.75rem;
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background: var(--color-cat-theme);
+    background: radial-gradient(124.58% 136.70% at -45.83% -20.97%, #B8C2EF 0%, #9B6DB4 100%);
     padding: 0 2rem;
     left: 0;
 }
 
-.cat_menu_content p {
+.dragon_menu_content p {
     font-family: var(--font-cat);
     font-size: 20px;
     color: white;
     margin: 0.4rem;
     cursor: pointer;
-} 
+}
