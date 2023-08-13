@@ -1,16 +1,23 @@
 import React, {useState} from "react";
 import './navbarHover.css';
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import iconImg from '../../../assets/scale2.png';
 
 const NavbarHover = ({themeHandler}) => {
+    const navigator = useNavigate();
     const positionColor = "var(--color-gradient-trans)";
     const positionShadow = "box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset";
     const [position, setPosition] = useState(0);
     const [openState, setOpenState] = useState(false);
+    const [prePos, setPrePos] = useState(0);
     const clickHandler = (pos, theme) => {
         setPosition(pos);
         themeHandler(theme);
+        if(prePos===0&pos===0){
+            navigator(-1);
+        }
+        setPrePos(pos);
     }
     return (
         <motion.div className="dragon_hoverbar" animate={{width:openState?"400px":"60px"}} transition={{duration:0.3}}>
