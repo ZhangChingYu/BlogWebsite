@@ -1,16 +1,14 @@
 import React, {useState} from "react";
 import './cube.css';
-import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const Cube = ({Title, imgFile, Color, Weight, Top}) => {
+const Cube = ({Title, imgFile, Color, Weight, Top, clickhHandler}) => {
     const [hover, setHover] = useState(false);
-    const navigator = useNavigate();
     return(
         <div className="dragon_cube" style={{background:Color, flex:Weight}}
         onPointerEnter={()=>{setHover(true)}}
         onPointerLeave={()=>{setHover(false)}}
-        onClick={()=>{navigator("/work/", {state:{title:Title}})}}>
+        onClick={()=>clickhHandler()}>
             <h2>{Title}</h2>
             <div className="dragon_cube_img" style={{paddingTop:Top}}>
                 {imgFile!==undefined?
