@@ -6,7 +6,7 @@ import { PageNext } from '../../components/dragon';
 
 const DragonApp = () => {
     return(
-        <div>
+        <div className="dragon_app">
             <Header />
             <AppSection />
             <PageNext />
