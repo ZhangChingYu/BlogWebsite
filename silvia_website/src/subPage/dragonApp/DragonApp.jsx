@@ -10,7 +10,7 @@ const DragonApp = () => {
             <Header Theme={"App."} Timeline={"2023 - Present"} Intro={"Some Apps I created out of personal interest. Welcome to check them out on App Store. Don’t worry, all of them are free to download."}/>
             <AppSection />
             <PageNext />
-            <Footer />
+            <Footer background={"var(--color-dragon-theme)"} textColor={"white"} Title={"Check Out My Github"} emailColor={"#FFF0A1"}/>
         </div>
     )
 }
