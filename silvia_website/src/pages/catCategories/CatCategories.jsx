@@ -13,7 +13,7 @@ const CatCategories = () => {
             <Header Title={"Category."}/>
             <div className="cat_categories_body">
                 <h2>Easier Way To Explore This Website</h2>
-                <di className="cat_categories_content">
+                <div className="cat_categories_content">
                     <div className="cat_catgories_content_row">
                         <CateExtend name={"Daily"} color={"var(--color-cat-theme)"}/>
                         <CateExtend name={"Workout"} color={"var(--color-cat-theme)"}/>
@@ -26,7 +26,7 @@ const CatCategories = () => {
                         <CateExtend name={"Personal Tips"} color={"#C87D7F"}/>
                         <CateExtend name={"Experience"} color={"#C87D7F"}/>
                     </div>
-                </di>
+                </div>
             </div>
             <Footer background={"var(--color-cat-bg)"} />
         </div>

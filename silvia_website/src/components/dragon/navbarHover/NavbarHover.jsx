@@ -10,7 +10,7 @@ const NavbarHover = ({themeHandler, initPos}) => {
     const positionShadow = "box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset";
     const [position, setPosition] = useState(initPos);
     const [openState, setOpenState] = useState(false);
-    const [prePos, setPrePos] = useState(0);
+    const [prePos, setPrePos] = useState(initPos);
     const clickHandler = (pos, theme) => {
         setPosition(pos);
         themeHandler(theme);

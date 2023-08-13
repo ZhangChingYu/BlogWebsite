@@ -1,0 +1,22 @@
+.dragon_categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dragon_categories_content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dragon_categories_content h2 {
+    font-family: var(--font-family);
+    font-size: 30px;
+    color: white;
+    margin-bottom: 2rem;
+    text-align: center;
+}
