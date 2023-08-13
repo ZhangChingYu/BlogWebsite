@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import './theme.css';
 import { NavbarHover } from '../../components/dragon';
 import { DragonApp } from '../../subPage';
+import { Footer } from "../../containers";
 
 const DragonTheme = () => {
     const [theme, setTheme] = useState("works");
@@ -10,6 +11,7 @@ const DragonTheme = () => {
         <div className="dragon_theme">
             <NavbarHover themeHandler={setTheme}/>
             <DragonApp />
+            <Footer background={"var(--color-dragon-theme)"} textColor={"white"} Title={"Check Out My Github"} emailColor={"#FFF0A1"}/>
         </div>
     )
 }
