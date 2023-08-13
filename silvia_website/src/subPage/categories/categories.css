@@ -5,7 +5,7 @@
     align-items: center;
 }
 
-.dragon_categories_content {
+.dragon_categories_body {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -13,10 +13,25 @@
     align-items: center;
 }
 
-.dragon_categories_content h2 {
+.dragon_categories_body h2 {
     font-family: var(--font-family);
     font-size: 30px;
     color: white;
     margin-bottom: 2rem;
     text-align: center;
+}
+
+.dragon_categories_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 14rem;
+}
+
+.dragon_categories_content_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
 }
