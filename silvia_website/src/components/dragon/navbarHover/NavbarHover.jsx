@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import iconImg from '../../../assets/scale2.png';
 
-const NavbarHover = ({themeHandler}) => {
+const NavbarHover = ({themeHandler, initPos}) => {
     const navigator = useNavigate();
     const positionColor = "var(--color-gradient-trans)";
     const positionShadow = "box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset";
-    const [position, setPosition] = useState(0);
+    const [position, setPosition] = useState(initPos);
     const [openState, setOpenState] = useState(false);
     const [prePos, setPrePos] = useState(0);
     const clickHandler = (pos, theme) => {
@@ -16,6 +16,9 @@ const NavbarHover = ({themeHandler}) => {
         themeHandler(theme);
         if(prePos===0&pos===0){
             navigator(-1);
+        }
+        if(initPos!==0&pos===0){
+            navigator("/work/theme")
         }
         setPrePos(pos);
     }
