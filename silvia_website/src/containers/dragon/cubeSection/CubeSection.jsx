@@ -9,8 +9,8 @@ import { useNavigate } from "react-router-dom";
 
 const CubeSection = () => {
     const navigator = useNavigate();
-    const clickHandler = () => {
-        navigator("/work/theme", {state:{initTheme:"works", initPos:0}});
+    const clickHandler = (Title) => {
+        navigator("/work/theme", {state:{initTheme:"works", initPos:0, workTheme:Title}});
     }
     return(
         <div className="dragon_cubeSection">

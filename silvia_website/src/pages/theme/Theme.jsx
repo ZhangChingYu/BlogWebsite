@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import './theme.css';
 import { NavbarHover } from '../../components/dragon';
-import { Categories, DragonApp } from '../../subPage';
+import { Categories, DragonApp, DragonNotes } from '../../subPage';
 import { Footer } from "../../containers";
 import { useLocation } from "react-router-dom";
 
@@ -12,9 +12,16 @@ const DragonTheme = () => {
     let initPos=data.initPos;
     const showTheme = () => {
         if(theme==="works"){
-            return(
-                <DragonApp />
-            )
+            if(data.workTheme==="App"){
+                return(
+                    <DragonApp />
+                )
+            }
+            else if(data.workTheme==="Notes"){
+                return(
+                    <DragonNotes />
+                )
+            }
         }
         else if(theme==='category'){
             return(

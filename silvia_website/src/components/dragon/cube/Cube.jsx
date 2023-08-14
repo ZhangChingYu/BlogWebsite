@@ -8,7 +8,7 @@ const Cube = ({Title, imgFile, Color, Weight, Top, clickhHandler}) => {
         <div className="dragon_cube" style={{background:Color, flex:Weight}}
         onPointerEnter={()=>{setHover(true)}}
         onPointerLeave={()=>{setHover(false)}}
-        onClick={()=>clickhHandler()}>
+        onClick={()=>clickhHandler(Title)}>
             <h2>{Title}</h2>
             <div className="dragon_cube_img" style={{paddingTop:Top}}>
                 {imgFile!==undefined?
