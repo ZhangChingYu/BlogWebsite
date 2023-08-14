@@ -3,7 +3,7 @@ import './cateExtend.css';
 import { Arrow } from '../../../components';
 import { motion } from 'framer-motion';
 
-const CateExtend = ({name, color}) => {
+const CateExtend = ({name, color, to}) => {
     const [showBox, setShowBox] = useState(false);
     var mainColor = "var(--color-cat-theme)";
     if(color!==undefined){
@@ -19,7 +19,7 @@ const CateExtend = ({name, color}) => {
                     <p>Here I’ve share some of my personal experiences that I think might be helpful to someone that encountering similar situation. Welcome to check out on them!</p>
                 </div>
                 <div className="cat_extendItem_hideBox_btn">
-                    <Arrow category={name} color={mainColor}/>
+                    <Arrow category={name} color={mainColor} to={to}/>
                 </div>
             </motion.div>:<></>}
         </div>
