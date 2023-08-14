@@ -19,7 +19,7 @@ const DragonTheme = () => {
             }
             else if(data.workTheme==="Notes"){
                 return(
-                    <DragonNotes />
+                    <DragonNotes/>
                 )
             }
         }
