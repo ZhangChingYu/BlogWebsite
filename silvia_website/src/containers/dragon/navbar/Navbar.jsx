@@ -11,6 +11,7 @@ const Navbar = ({navigator}) => {
         <div className="dragon_navbar">
             <Menu />
             <motion.div 
+            title="Home"
             animate={{y:-20, opacity:1}} initial={{opacity:0}} transition={{duration:0.3, type:"tween"}}
             className="dragon_navbar_b"
             onClick={()=>{navigator(-1)}}>
