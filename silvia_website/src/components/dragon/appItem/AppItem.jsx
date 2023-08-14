@@ -15,7 +15,8 @@ const AppItem = ({Type, isSoon}) => {
         Soon = isSoon;
     }
     return(
-        <div className="dragon_appItem" style={{height:itemType?"420px":"200px"}}
+        <motion.div className="dragon_appItem" style={{height:itemType?"420px":"200px"}}
+        animate={{scale:[1,1.02,1]}} transition={{duration:0.6, type:"just"}}
         onPointerEnter={()=>{setHover(true)}} onPointerLeave={()=>{setHover(false)}}>
             <div className="dragon_appItem_header">
                 <h4>Mafoody</h4>
@@ -32,7 +33,7 @@ const AppItem = ({Type, isSoon}) => {
                     <img src={itemType?rectImg:roundImg} alt="" style={itemType?{}:{rotate:"-90deg"}}/>
                 </motion.div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

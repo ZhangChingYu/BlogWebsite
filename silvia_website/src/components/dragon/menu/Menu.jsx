@@ -19,7 +19,7 @@ const Menu = () => {
                 <Link to={"/"} style={{textDecoration:"none"}}><motion.p>Home</motion.p></Link>
                 <Link to={"/"} style={{textDecoration:"none"}}><motion.p>Code</motion.p></Link>
                 <Link to={"/"} style={{textDecoration:"none"}}><motion.p>Project</motion.p></Link>
-                <Link to={"/"} style={{textDecoration:"none"}}><motion.p>Category</motion.p></Link>
+                <Link to={"/work/theme"} state={{initTheme:"category", initPos:1}} style={{textDecoration:"none"}}><motion.p>Category</motion.p></Link>
                 <Link to={"/life"} style={{textDecoration:"none"}}><motion.p>Life</motion.p></Link>
             </motion.div>
         </div>

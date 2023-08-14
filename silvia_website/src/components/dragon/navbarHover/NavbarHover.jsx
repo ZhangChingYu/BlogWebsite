@@ -18,7 +18,7 @@ const NavbarHover = ({themeHandler, initPos}) => {
             navigator(-1);
         }
         if(initPos!==0&pos===0){
-            navigator("/work/theme")
+            navigator("/work")
         }
         setPrePos(pos);
     }

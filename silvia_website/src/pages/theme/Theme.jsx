@@ -3,9 +3,13 @@ import './theme.css';
 import { NavbarHover } from '../../components/dragon';
 import { Categories, DragonApp } from '../../subPage';
 import { Footer } from "../../containers";
+import { useLocation } from "react-router-dom";
 
 const DragonTheme = () => {
-    const [theme, setTheme] = useState("works");
+    const location = useLocation();
+    const data = location.state;
+    const [theme, setTheme] = useState(data.initTheme);
+    let initPos=data.initPos;
     const showTheme = () => {
         if(theme==="works"){
             return(
@@ -21,7 +25,7 @@ const DragonTheme = () => {
     console.log(theme);
     return(
         <div className="dragon_theme">
-            <NavbarHover themeHandler={setTheme} initPos={0}/>
+            <NavbarHover themeHandler={setTheme} initPos={initPos}/>
             {showTheme()}
             <Footer background={"var(--color-dragon-theme)"} textColor={"white"} Title={"Check Out My Github"} emailColor={"#FFF0A1"}/>
         </div>

@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 const CubeSection = () => {
     const navigator = useNavigate();
     const clickHandler = () => {
-        navigator("/work/theme");
+        navigator("/work/theme", {state:{initTheme:"works", initPos:0}});
     }
     return(
         <div className="dragon_cubeSection">
