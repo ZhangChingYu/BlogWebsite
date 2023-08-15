@@ -5,3 +5,4 @@ export { default as Header } from './header/Header';
 export { default as AppSection } from './appSection/AppSection';
 export { default as NoteSection } from './noteSection/NoteSection';
 export { default as NoteClip } from './noteClip/NoteClip';
+export { default as WebSection } from './webSection/WebSection';
