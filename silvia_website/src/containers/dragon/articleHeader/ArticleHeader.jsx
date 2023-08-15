@@ -7,9 +7,9 @@ const ArticleHeader = ({Title, Date, Content, Img}) => {
             <h2>{Title}</h2>
             <p className="dragon_article_header_date">{Date}</p>
             <p>{Content}</p>
-            <div className="dragon_article_header_img">
+            {Img!==undefined?<div className="dragon_article_header_img">
                 <img src={Img} alt=""/>
-            </div>
+            </div>:<></>}
         </div>
     )
 }
