@@ -1,0 +1,22 @@
+.dragon_projectSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8rem;
+    margin-top: 4rem;
+}
+
+.dragon_projectSection_btn {
+    transition: all .1s ease-in-out;
+    scale: 1;
+}
+
+.dragon_projectSection_btn:hover {
+    scale: 1.1;
+}
+
+.dragon_projectSection_btn:active {
+    scale: 0.9;
+}
+

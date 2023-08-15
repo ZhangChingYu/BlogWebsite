@@ -8,3 +8,4 @@ export { default as NoteClip } from './noteClip/NoteClip';
 export { default as WebSection } from './webSection/WebSection';
 export { default as ArticleHeader } from './articleHeader/ArticleHeader';
 export { default as ArticleSection } from './articleSection/ArticleSection';
+export { default as ProjectSection } from './projectSection/ProjectSection';
