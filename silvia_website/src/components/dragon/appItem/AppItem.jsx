@@ -1,10 +1,12 @@
 import React, {useState} from "react";
 import './appItem.css';
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import roundImg from '../../../assets/scale.png';
 import rectImg from '../../../assets/blog.png';
 
-const AppItem = ({Type, isSoon}) => {
+const AppItem = ({Type, isSoon, Title, Intro, Img}) => {
+    const navigator = useNavigate();
     const [hover, setHover] = useState(false);
     var itemType = false;
     var Soon = false;
@@ -17,7 +19,7 @@ const AppItem = ({Type, isSoon}) => {
     return(
         <motion.div className="dragon_appItem" style={{height:itemType?"420px":"200px"}}
         animate={{scale:[1,1.02,1]}} transition={{duration:0.6, type:"just"}}
-        onPointerEnter={()=>{setHover(true)}} onPointerLeave={()=>{setHover(false)}}>
+        onPointerEnter={()=>{setHover(true)}} onPointerLeave={()=>{setHover(false)}} onClick={()=>{navigator('/work/article')}}>
             <div className="dragon_appItem_header">
                 <h4>Mafoody</h4>
                 {Soon?<div className="dragon_appItem_soon">

@@ -2,13 +2,15 @@ import React, {useState} from "react";
 import './latest.css';
 import imgUrl from '../../../assets/blog.png';
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Latest = () => {
     const [hover, setHover] = useState(false);
+    const navigator = useNavigate()
     return(
         <div className="dragon_latestSection">
             <h2>Latest</h2>
-            <div className="dragon_latestSection_cube">
+            <div className="dragon_latestSection_cube" onClick={()=>{navigator('/work/article')}}>
                 <div className="dragon_latestSection_img"
                 onPointerEnter={()=>{setHover(true)}}
                 onPointerLeave={()=>{setHover(false)}}>

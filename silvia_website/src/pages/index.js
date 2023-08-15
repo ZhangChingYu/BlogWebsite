@@ -8,3 +8,4 @@ export {default as CatCategory} from './catCategory/CatCategory';
 export {default as CatArticle} from './catArticle/CatArticle';
 export {default as Dragon} from './dragon/Dragon';
 export {default as DragonTheme} from './theme/Theme';
+export {default as DragonArticle} from './dragonArticle/DragonArticle';
