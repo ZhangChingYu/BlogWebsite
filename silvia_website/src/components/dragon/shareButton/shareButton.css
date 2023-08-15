@@ -1,5 +1,5 @@
-.cat_share_button {
-    width: 100%;
+.dragon_share_button {
+    width: 80%;
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-start;
@@ -7,20 +7,19 @@
     margin-bottom: 1rem;
 }
 
-.cat_headerA_share_icon {
-    color: black;
+.dragon_share_icon {
     cursor: pointer;
-    margin-right: 1rem;
     transition: all .2s ease-in-out;
     scale: 1;
 }
 
-.cat_headerA_share_icon:hover{
+.dragon_share_icon:hover {
     scale: 1.1;
 }
 
-.cat_headerA_shareBox {
-    background: var(--color-cat-item);
+.dragon_share_box {
+    border-radius: 10px;
+    background: rgba(217, 217, 217, 0.74);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -30,7 +29,7 @@
     margin-right: 1rem;
 }
 
-.cat_headerA_share_item {
+.dragon_share_item {
     cursor: pointer;
     margin: 0 3px;
     color: black;
@@ -38,10 +37,10 @@
     scale: 1;
 }
 
-.cat_headerA_share_item:hover {
+.dragon_share_item:hover {
     scale: 1.1;
 }
 
-.cat_headerA_share_item:active {
+.dragon_share_item:active {
     scale: 0.9;
 }

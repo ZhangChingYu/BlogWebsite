@@ -5,3 +5,4 @@ export { default as AppItem } from './appItem/AppItem';
 export { default as NavbarHover } from './navbarHover/NavbarHover';
 export { default as PageNext } from './pageNext/PageNext';
 export { default as NotesItem } from './notesItem/NotesItem';
+export { default as ShareButton } from './shareButton/ShareButton';
