@@ -21,7 +21,7 @@ const NotesItem = ({Title, Intro, Img}) => {
                     <motion.img animate={{scale:hover?1.1:1}} src={Img} alt=""/>
                 </div>
             </div>
-            {noteShow?<NoteClip clickHandler={setNoteShow}/>:<></>}
+            {noteShow?<NoteClip clickHandler={setNoteShow} Title={Title} Date={"2023/08/02"}/>:<></>}
         </div>
     )
 }
