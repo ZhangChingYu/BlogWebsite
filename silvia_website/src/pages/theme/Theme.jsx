@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import './theme.css';
 import { NavbarHover } from '../../components/dragon';
 import { TopBtn } from "../../components";
-import { Categories, DragonApp, DragonNotes, DragonWeb, Project } from '../../subPage';
+import { Categories, DragonApp, DragonNotes, DragonWeb, Project, ComingSoon } from '../../subPage';
 import { Footer } from "../../containers";
 import { useLocation } from "react-router-dom";
 
@@ -37,6 +37,11 @@ const DragonTheme = () => {
         else if(theme==='project'){
             return(
                 <Project />
+            )
+        }
+        else{
+            return(
+                <ComingSoon />
             )
         }
     }
