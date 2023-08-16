@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import './search.css';
-import { Navbar } from '../../components';
+import { Navbar, TopBtn } from '../../components';
 import { SearchItem } from '../../components/home';
 import { Footer } from '../../containers';
 import { useNavigate, useLocation } from "react-router-dom"; 
@@ -23,6 +23,7 @@ const Search = () => {
     }
     return(
         <div className="home_search">
+            <TopBtn />
             <Navbar navigator={navigator}/>
             <div className="home_search_box">
                 <input 

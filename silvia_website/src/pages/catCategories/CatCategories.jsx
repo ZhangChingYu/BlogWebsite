@@ -3,12 +3,14 @@ import './catCategories.css';
 import { Navbar, Header } from '../../containers/cat';
 import { Footer } from '../../containers';
 import { CateExtend } from '../../components/cat';
+import { TopBtn } from "../../components";
 import { useNavigate } from 'react-router-dom';
 
 const CatCategories = () => {
     const navigator = useNavigate();
     return(
         <div className="cat_categories">
+            <TopBtn />
             <Navbar navigator={navigator}/>
             <Header Title={"Category."}/>
             <div className="cat_categories_body">

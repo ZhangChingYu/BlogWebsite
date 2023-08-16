@@ -2,12 +2,14 @@ import React from "react";
 import './dragon.css';
 import { Navbar, CubeSection, Latest } from '../../containers/dragon';
 import { Footer } from '../../containers';
+import { TopBtn } from '../../components';
 import { useNavigate } from "react-router-dom";
 
 const Dragon = () => {
     const navigator = useNavigate();
     return(
         <div className="dragon">
+            <TopBtn />
             <Navbar navigator={navigator}/>
             <CubeSection />
             <Latest />

@@ -3,6 +3,7 @@ import './catCategory.css';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Navbar, Header } from '../../containers/cat';
 import { PageNext } from '../../components/cat';
+import { TopBtn } from "../../components";
 import { Footer } from '../../containers';
 import { SearchItem } from '../../components/home';
 const CatCategory = () => {
@@ -12,6 +13,7 @@ const CatCategory = () => {
     const navigator = useNavigate();
     return(
         <div className="cat_category_page">
+            <TopBtn />
             <Navbar navigator={navigator}/>
             <Header Title={data.category+"."}/>
             <div className="cat_category_results">

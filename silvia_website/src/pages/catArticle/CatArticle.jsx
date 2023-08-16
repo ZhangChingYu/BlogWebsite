@@ -3,12 +3,14 @@ import './catArticle.css';
 import { ArticleNavbar, ArticleHeaderC, ArticleSectionC } from '../../containers/cat';
 import { Footer } from '../../containers';
 import { CateItem } from "../../components/cat";
+import { TopBtn } from "../../components";
 import { useNavigate } from "react-router-dom";
 
 const CatArticle = () => {
     const navigator = useNavigate();
     return(
         <div className="cat_article">
+            <TopBtn />
             <ArticleNavbar navigator={navigator}/>
             <ArticleHeaderC />
             <ArticleSectionC />

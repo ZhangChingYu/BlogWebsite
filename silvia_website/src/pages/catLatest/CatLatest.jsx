@@ -3,6 +3,7 @@ import './catLatest.css';
 import { Navbar, Header, NineItems} from '../../containers/cat';
 import { PageNext } from '../../components/cat';
 import { Footer } from '../../containers';
+import { TopBtn } from "../../components";
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import imgUrl from '../../assets/cakecover.JPG';
 
@@ -14,6 +15,7 @@ const CatLatest =() => {
     if(data.title === "Latest"){
         return(
             <div className="cat_latest">
+                <TopBtn />
                 <Navbar navigator={navigator}/>
                 <Header Title={"What's New In My Life."}/>
                 <div className="cat_latest_header">

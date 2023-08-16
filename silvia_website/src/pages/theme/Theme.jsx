@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import './theme.css';
 import { NavbarHover } from '../../components/dragon';
+import { TopBtn } from "../../components";
 import { Categories, DragonApp, DragonNotes, DragonWeb, Project } from '../../subPage';
 import { Footer } from "../../containers";
 import { useLocation } from "react-router-dom";
@@ -42,6 +43,7 @@ const DragonTheme = () => {
     console.log(theme);
     return(
         <div className="dragon_theme">
+            <TopBtn />
             <NavbarHover themeHandler={setTheme} initPos={initPos}/>
             {showTheme()}
             <Footer background={"var(--color-dragon-theme)"} textColor={"white"} Title={"Check Out My Github"} emailColor={"#FFF0A1"}/>
