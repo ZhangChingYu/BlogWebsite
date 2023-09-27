@@ -1,0 +1,121 @@
+body {
+    background: var(--color-cat-bg);
+}
+
+.login {
+    padding: 0;
+    margin: 0;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    
+    font-family: var(--font-cat);
+}
+
+.login_header{
+    margin-bottom: 4rem;
+    margin-top: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_header_img {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+    border-radius: 50%;
+    border: 10px solid;
+    border-color:white;
+    box-shadow: var(--box-shadow);
+}
+
+.login_header_img img {
+    margin-top: 100px;
+}
+
+.login_input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_input_wrapper {
+    margin: 1rem;
+    width: 70%;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login_input_wrapper p {
+    flex: 2;
+    font-size: 20px;
+    font-family: var(--font-cat);
+    font-weight: 600;
+    align-self: center;
+}
+
+input {
+    flex: 5;
+    padding: 1rem;
+    border-radius: 50px;
+    border-color: black;
+    border-style: double;
+    border-width: 2px;
+    font-size: 18px;
+    font-family: var(--font-cat);
+}
+
+.login_btn {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_btn div {
+    cursor: pointer;
+    width: 200px;
+    border-radius: 5px;
+    padding: 12px 28px;
+    margin: 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+.login_btn div:hover:active {
+    transition: ease-in-out;
+    scale: 0.98;
+}
+
+.login_btn div:hover {
+    transition: ease-in-out;
+    scale: 1.05;
+}
+
+.login_btn_cancelBtn {
+    background-color: var(--color-cat-theme);
+}
+
+.login_btn_loginBtn {
+    background-color: var(--color-dragon-theme);
+}
+

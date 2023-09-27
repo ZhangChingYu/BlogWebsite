@@ -1,6 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom';
 import { Home, About, Cat, CatLatest, CatCategories, Search, CatCategory, CatArticle, Dragon, DragonTheme, DragonArticle} from './pages';
+import { Login } from './adminPages';
 import './index.css';
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <Route path='work' element={<Dragon />}/>
         <Route path='work/theme' element={<DragonTheme />}/>
         <Route path='work/article' element={<DragonArticle />}/>
+        <Route path='/admin' element = { <Login/> } />
       </Routes>
     </div>
   )
