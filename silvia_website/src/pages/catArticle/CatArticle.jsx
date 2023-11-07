@@ -1,6 +1,6 @@
 import React from "react";
 import './catArticle.css';
-import { ArticleNavbar, ArticleHeaderC, ArticleSectionC } from '../../containers/cat';
+import { ArticleNavbar, ArticleHeaderC, ArticleSectionA } from '../../containers/cat';
 import { Footer } from '../../containers';
 import { CateItem } from "../../components/cat";
 import { TopBtn } from "../../components";
@@ -13,7 +13,7 @@ const CatArticle = () => {
             <TopBtn />
             <ArticleNavbar navigator={navigator}/>
             <ArticleHeaderC />
-            <ArticleSectionC />
+            <ArticleSectionA />
             <h2 className="cat_article_category_text">Related Categories:</h2>
             <div className="cat_article_categories">
                 <CateItem name={"Baking"} />

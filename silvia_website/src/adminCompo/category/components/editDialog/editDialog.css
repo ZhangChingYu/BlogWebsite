@@ -1,0 +1,42 @@
+.admin_category_edit {
+    position: absolute;
+    background-color: var(--color-dragon-item);
+    width: 500px;
+    height: 460px;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    overflow-y: scroll;
+}
+
+.admin_categiry_edit_cancel {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:whitesmoke ;
+    box-shadow: var(--box-shadow);
+    padding: 4px;
+    width: fit-content;
+    border-radius: 25px;
+}
+
+.admin_category_edit button {
+    cursor: pointer;
+    border: none;
+    margin-top: 30px;
+    padding: 4px 10px;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    background-color: var(--color-blue);
+    font-size: 18px;
+    font-family: var(--font-cat);
+    color: white;
+}

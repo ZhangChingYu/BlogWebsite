@@ -1,0 +1,42 @@
+.admin_addArticle_preview {
+    padding: 2rem;
+    padding-bottom: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.admin_addArticle_preHeader {
+    margin-top: 3rem;
+    border: 2px black dashed;
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+}
+
+.admin_addArticle_preview_theme {
+    position: absolute;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.admin_addArticle_preview_theme_bar {
+    width: 66px;
+    height: 25px;
+    background-color: lightgrey;
+    border-radius: 25px;
+    box-shadow: inset 1px 1px 3px 1px rgba(0, 0, 0, 0.25);
+}
+
+.admin_addArticle_preview_theme_switch {
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    border-radius: 50px;
+    position: absolute;
+    box-shadow: var(--box-shadow);
+}
