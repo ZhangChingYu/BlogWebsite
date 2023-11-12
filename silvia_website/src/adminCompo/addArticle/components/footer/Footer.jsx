@@ -4,7 +4,7 @@ import "./footer.css";
 const Footer = ({theme, setHeaderType, setSectionType}) => {
     if(!theme){
         setHeaderType("A");
-        setSectionType("A");
+        setSectionType("B");
     }
 
     const HeaderHandler = (type) => {
@@ -16,9 +16,12 @@ const Footer = ({theme, setHeaderType, setSectionType}) => {
         }
     }
 
-    const SectionType = (type) => {
-        if(theme) {
-
+    const SectionHandler = (type) => {
+        if(!theme && type!=="B") {
+            // do nothing
+        }
+        else {
+            setSectionType(type);
         }
     }
 
@@ -57,7 +60,7 @@ const Footer = ({theme, setHeaderType, setSectionType}) => {
                 </div>
             </div>
             <div className="admin_addArticle_footer_section">
-                <div className="admin_addArticle_footer_tool" style={theme?{}:{cursor:"default", backgroundColor:"lightgrey"}} onClick={()=>{}}>
+                <div className="admin_addArticle_footer_tool" style={theme?{}:{cursor:"default", backgroundColor:"lightgrey"}} onClick={()=>{SectionHandler("A")}}>
                     <p>Section A</p>
                     <div className="admin_addArticle_footer_sa">
                         <h1>Title</h1>
@@ -72,7 +75,7 @@ const Footer = ({theme, setHeaderType, setSectionType}) => {
                         </div>
                     </div>
                 </div>
-                <div className="admin_addArticle_footer_tool">
+                <div className="admin_addArticle_footer_tool" onClick={()=>{SectionHandler("B")}}>
                     <p>Section B</p>
                     <div className="admin_addArticle_footer_sb">
                         <h1>Title</h1>
@@ -81,7 +84,7 @@ const Footer = ({theme, setHeaderType, setSectionType}) => {
                         <div>img</div>
                     </div>
                 </div>
-                <div className="admin_addArticle_footer_tool" style={theme?{}:{cursor:"default", backgroundColor:"lightgrey"}} onClick={()=>{}}>
+                <div className="admin_addArticle_footer_tool" style={theme?{}:{cursor:"default", backgroundColor:"lightgrey"}} onClick={()=>{SectionHandler("C")}}>
                     <p>Section C</p>
                     <div className="admin_addArticle_footer_sc">
                         <div>

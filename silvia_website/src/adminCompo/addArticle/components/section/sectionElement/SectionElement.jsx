@@ -37,7 +37,10 @@ const SectionElement = ({sectionId}) => {
             {selectedImages.length > 0 && (
                 <div className="admin_addArticle_section_pics">
                     {selectedImages.map((image, index) => (
-                        <img key={sectionId +"_"+ index} src={image} alt={`selected pic ${index}`}/>
+                        <div key={sectionId +"_"+ index+"_wrapper"}>
+                            <img key={sectionId +"_"+ index} src={image} alt={`selected pic ${index}`}/>
+                            <input key={sectionId + "_" + index + "_input"} name={`picsUrl_${sectionId}`} value={image} style={{display:"none"}}/>
+                        </div>
                     ))}
                 </div>
             )}

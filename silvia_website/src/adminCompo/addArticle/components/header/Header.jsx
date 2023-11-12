@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./header.css";
 
-const HeaderForm = ({SubmitHandler, header, setCoverUrl}) => {
+const HeaderForm = ({SubmitHandler, header}) => {
     const [selectedImage, setSelectedImage] = useState(null);
     const [currentDate, setCurrentDate] = useState(new Date());
 
@@ -13,8 +13,6 @@ const HeaderForm = ({SubmitHandler, header, setCoverUrl}) => {
             reader.onload = (e) => {
                 // 在讀取完成後，將圖片數據設定為選定圖片的URL
                 setSelectedImage(e.target.result);
-                // 將同個圖片Url傳到母頁面，供後續展示
-                setCoverUrl(e.target.result);
             };
             reader.readAsDataURL(file); // 讀取文件內容
         }
@@ -25,11 +23,11 @@ const HeaderForm = ({SubmitHandler, header, setCoverUrl}) => {
             <h1>Edit Your Header</h1>
             <div className="admin_addArticle_header">
                 <label>
-                    <input className="admin_addArticle_header_title" type={"text"} name="title" defaultValue={header.title} placeholder="Article Title" required/>
+                    <input className="admin_addArticle_header_title" type={"text"} name="title" defaultValue={header.title?header.title:""} placeholder="Article Title" required/>
                 </label>
                 <p>{currentDate.getFullYear()}/{currentDate.getMonth()+1}/{currentDate.getDate()}</p>
                 <label>
-                    <textarea className="admin_addArticle_header_intro" name="intro" defaultValue={header.intro} id="" cols="30" rows="10" placeholder="Introduction" required/>
+                    <textarea className="admin_addArticle_header_intro" name="intro" defaultValue={header.intro?header.intro:""} id="" cols="30" rows="10" placeholder="Introduction" required/>
                 </label>
                 <label className="admin_addArticle_header_cov">
                     Add Your Cover Picture:
@@ -40,6 +38,7 @@ const HeaderForm = ({SubmitHandler, header, setCoverUrl}) => {
                     <img src={selectedImage} alt="選擇的圖片" style={{maxWidth:"100%"}}/>
                 </div>
                 )}
+                <input name="coverUrl" value={selectedImage} style={{display:"none"}}/>
             </div>
             <div className="admin_addArticle_header_btn">
                 <button type="reset">Reset</button>

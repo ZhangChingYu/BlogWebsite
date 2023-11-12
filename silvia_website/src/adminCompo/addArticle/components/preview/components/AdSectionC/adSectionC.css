@@ -1,0 +1,57 @@
+.admin_addArticle_preSecitonC{
+    border: 2px black dashed;
+    padding: 1rem;
+    color: black;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin_addArticle_preSecitonC_header {
+    padding: 20px 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.admin_addArticle_preSecitonC_header div {
+    width: 48%;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.admin_addArticle_preSecitonC_header h1 {
+    font-family: var(--font-family);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.admin_addArticle_preSecitonC_header p {
+    font-family: var(--font-cat);
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.admin_addArticle_preSecitonC_pics {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.admin_addArticle_preSecitonC_pics div {
+    margin: 10px;
+    height: 300px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48%; /* 两行两行的形式，根据需要调整宽度 */
+    margin-bottom: 10px; /* 设置间距，根据需要调整 */
+    overflow: hidden;
+}

@@ -3,6 +3,7 @@ import "./adHeaderB.css";
 import { ShareButton } from "../../../../../../components/cat";
 
 const AdHeaderB = ({header}) => {
+    const intro = header.intro.replace("\n","<br><br>")
     return (
         <div className="admin_addArticle_preHeaderB">
             <div className="admin_addArticle_preHeaderB_pic">
@@ -12,7 +13,7 @@ const AdHeaderB = ({header}) => {
                 <ShareButton />
                 <h1>{header.title}</h1>
                 <p className="admin_addArticle_preHeaderB_date">2000/12/12</p>
-            <p className="admin_addArticle_preHeaderB_intro">{header.intro}</p>
+            <p className="admin_addArticle_preHeaderB_intro" dangerouslySetInnerHTML={{ __html: intro }}></p>
             </div>
         </div>
     )

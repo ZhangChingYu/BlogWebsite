@@ -14,9 +14,10 @@ const Home = () => {
     const [header, setHeader] = useState({});
     const [sectionList, setSectionList] = useState([]);
     const [HType, setHType] = useState("A");
-    const [FType, setFType] = useState("A");
+    const [SType, setSType] = useState(["B","B","B","B","B","B","B","B","B","B"]);  // maximun 10 sections
     const headerRef = useRef(null);
     const [theme, setTheme] = useState(true);  // true: life, false: work
+    const [selectState, setSelectState] = useState(0);
 
     if(headerRef.current){
         if(bodyHeight<1){
@@ -24,6 +25,15 @@ const Home = () => {
             const element = headerRef.current;
             const height = element.getBoundingClientRect().height;
             setBodyHeight(SCREEN_HEIGHT-height);
+        }
+    }
+
+    // set add article section's type
+    const AddArticleSetSectionTypeHandler = (value)=>{
+        if(selectState !==1 && selectState !== 0 && selectState < 12){
+            const temp = SType;
+            temp[selectState-2] = value;
+            setSType(temp);
         }
     }
 
@@ -45,6 +55,9 @@ const Home = () => {
                     header={header} setHeader={setHeader} 
                     sectionList={sectionList} setSectionList={setSectionList}
                     headerType={HType}
+                    sectionType={SType}
+                    select={selectState}
+                    setSelect={setSelectState}
                     theme={theme} setTheme={setTheme}/>
                 )
             case "category manage":
@@ -99,7 +112,7 @@ const Home = () => {
                     <div className="admin_home_bar" style={barState==="comments"?{boxShadow:"inset 0px 0px 4px rgba(0, 0, 0, 0.25)"}:{}} onClick={()=>{setBarState("comments")}}>
                         <p>Comments</p>
                     </div>
-                    {footerShow?<AddArticleFooter setHeaderType={setHType} setSectionType={setFType} theme={theme}/>:<></>}
+                    {footerShow?<AddArticleFooter setHeaderType={setHType} setSectionType={AddArticleSetSectionTypeHandler} theme={theme}/>:<></>}
                 </div>
             </div>
         </div>

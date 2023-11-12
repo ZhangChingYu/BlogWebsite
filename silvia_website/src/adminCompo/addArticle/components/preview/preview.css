@@ -40,3 +40,21 @@
     position: absolute;
     box-shadow: var(--box-shadow);
 }
+
+.admin_addArticle_preSection {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.admin_addArticle_preSection div {
+    width: 100%;
+}
+
+.admin_addArticle_preview button {
+    cursor: pointer;
+}

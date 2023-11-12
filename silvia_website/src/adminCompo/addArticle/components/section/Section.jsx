@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./section.css";
 import SectionElement from "./sectionElement/SectionElement";
 
-const Section = ({goBackHandler, SubmitHandler, sectionCount, setSectionCount}) => {
+const Section = ({goBackHandler, SubmitHandler}) => {
+
+    const [sectionCount, setSectionCount] = useState(1); 
 
     // 增加一個 SectionElement 組件
     const addSection = () => {
@@ -30,6 +32,7 @@ const Section = ({goBackHandler, SubmitHandler, sectionCount, setSectionCount}) 
                     <button type="submit">Next</button>
                 </div>
             </div>
+            <input name="sectionCount" value={sectionCount} style={{display:"none"}}/>
         </form>
     )
 }
