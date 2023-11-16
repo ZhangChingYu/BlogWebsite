@@ -2,16 +2,23 @@ import React from "react";
 import './headerC.css';
 import { ShareButton } from "../../../components/cat";
 
-const HeaderC = () => {
+const HeaderC = ({title, date, intro, cover}) => {
+    const i = intro.replaceAll("\\"+"n","<br>")
+    const formattedDate = new Date(date).toLocaleDateString('en-TW', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        timeZone: 'Asia/Taipei',
+    });
     return(
-        <div className="cat_headerC" >
+        <div className="cat_headerC" style={{backgroundImage:`url(${cover.replace("media/image","http://localhost:8080/images")})`}}>
             <div className="cat_headerC_content">
                 <div className="cat_headerC_header">
-                    <p className="cat_headerC_date">2023/08/02</p>
+                    <p className="cat_headerC_date">{formattedDate}</p>
                     <ShareButton iconColor={"white"}/>
                 </div>
-                <h2>Celebrating Father’s Day by Baking a Special Cake.</h2>
-                <p>Whenever there is something to celebrate the baking energy inside me starts erupting. The picture was took 4 years ago, I still remember I took a lot of effort on that cake because I want my father to have a Father’s Day he would never forget. <br/><br/>In August, 2023, the upcoming Father's Day has many kids in a bind, especially those who are having trouble choosing a gift. Yet, nothing is more heart warming than a self-made gift, so why don’t make it tastier?</p>
+                <h2>{JSON.parse(`"${title}"`)}</h2>
+                <p dangerouslySetInnerHTML={{ __html: i }}></p>
             </div>
         </div>
     )

@@ -7,7 +7,7 @@
 
 .home_search_box {
     margin-top: 6rem;
-    width: 100%;
+    width: 800px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -60,13 +60,3 @@
     margin-top: 10px;
     color: var(--color-blue);
 }
-
-.home_search_result {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-

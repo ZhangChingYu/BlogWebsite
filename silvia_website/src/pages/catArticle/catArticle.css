@@ -12,6 +12,7 @@
     color:black;
     text-align: center;
     margin-bottom: 2rem;
+    margin-top: 6rem;
 }
 
 .cat_article_categories {
@@ -21,5 +22,5 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
 }

@@ -21,7 +21,7 @@ const Search = ({ inputHandler }) =>{
 
     return(
         <div className="cat_search">
-            <FaSearch size={25} onClick={searchHandler}/>
+            <FaSearch size={25} onClick={searchHandler} style={{cursor:"pointer"}}/>
             <motion.div className="cat_search_inputBox" animate={{scale:showInput?1:0, opacity:showInput?1:0}} initial={{scale: 0, opacity:1}} transition={{duration: 0.3, type: "tween"}}>
                     <input 
                     onKeyPress={(event)=>{if(event.code==="Enter"){searchHandler()}}}

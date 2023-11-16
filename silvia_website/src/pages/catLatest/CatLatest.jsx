@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './catLatest.css';
 import { Navbar, Header, NineItems} from '../../containers/cat';
 import { PageNext } from '../../components/cat';
@@ -10,35 +10,64 @@ import imgUrl from '../../assets/cakecover.JPG';
 const CatLatest =() => {
     const location = useLocation();
     const navigator = useNavigate();
-    const data = location.state;
-    //console.log(data.title);
-    if(data.title === "Latest"){
+    const title = location.state.title;
+    const [pageCount, setPageCount] = useState(0);
+    const [maxPage, setMaxPage] = useState(1);
+    const [emptyState, setEmptyState] = useState(false);
+    const [firstArticle, setFirstArticle] = useState();
+
+    useEffect(()=>{
+        fetch("http://localhost:8080/article/"+title.toLowerCase()+"/1/0/1", {method:"GET"})
+        .then((response)=>{
+            const headers = response.headers;
+            const count = headers.get("total-count");
+            if(count > 0){
+                setMaxPage(Math.ceil(count/9));
+                setEmptyState(false);
+            }
+            else {
+                setEmptyState(true);
+            }
+            return response.json();
+        })
+        .then((data)=>{
+            setFirstArticle(data[0]);
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+    },[title])
+
+    if(title === "Latest"){
         return(
             <div className="cat_latest">
                 <TopBtn />
                 <Navbar navigator={navigator}/>
                 <Header Title={"What's New In My Life."}/>
-                <div className="cat_latest_header">
-                    <div className="cat_latest_header_content">
-                        <div className="cat_latest_header_content_">
-                            <h2>Celebrating Father’s Day by Baking a Special Cake.</h2>
-                            <p>Whenever there is something to celebrate the baking energy inside me starts erupting. The picture was took 4 years ago, I still remember I took a lot of effort on that cake because I want my father to have a Father’s Day he would never forget. <br/><br/>In August, 2023, the upcoming Father's Day has many kids in a bind, especially those who are having trouble choosing a gift. Yet, nothing is more heart warming than a self-made gift, so why don’t make it tastier?</p>
+                {emptyState?<h1 className="no_article">No article yet...</h1>:
+                <div style={{width:"100%"}}>
+                    <div className="cat_latest_header">
+                        <div className="cat_latest_header_content">
+                            <div className="cat_latest_header_content_" style={{width:"100%"}}>
+                                {firstArticle===undefined?<h2></h2>:<h2>{JSON.parse(`"${firstArticle.title}"`)}</h2>}
+                                {firstArticle===undefined?<p></p>:<p>{JSON.parse(`"${firstArticle.intro}"`)}</p>}
+                            </div>
+                            <div className="cat_latest_header_link">
+                                <div></div>
+                                {firstArticle===undefined?<></>:<Link to="/life/article" state={{id:firstArticle.id}}><p>view more</p></Link>}  
+                            </div>
                         </div>
-                        <div className="cat_latest_header_link">
-                            <div></div>
-                            <Link to="/life/article"><p>view more</p></Link>
+                        <div className="cat_latest_header_img">
+                            {firstArticle===undefined?<img src={imgUrl} alt=""/>:<img src={firstArticle.coverPicUrl.replace("media/image", "http://localhost:8080/images")} alt=""/>} 
                         </div>
                     </div>
-                    <div className="cat_latest_header_img">
-                        <img src={imgUrl} alt=""/>
+                    <div className="cat_latest_item_section">
+                        <NineItems type={"latest"} pageCount={pageCount} navigator={navigator}/>
                     </div>
-                </div>
-                <div className="cat_latest_item_section">
-                    <NineItems />
-                </div>
-                <div className="cat_latest_page">
-                    <PageNext />
-                </div>
+                    <div className="cat_latest_page">
+                        <PageNext maxPage={maxPage} setPageCount={setPageCount}/>
+                    </div>
+                </div>}
                 <Footer background={"var(--color-cat-bg)"}/>
             </div>
         )
@@ -51,23 +80,23 @@ const CatLatest =() => {
                 <div className="cat_latest_header">
                     <div className="cat_latest_header_content">
                         <div className="cat_latest_header_content_">
-                            <h2>Celebrating Father’s Day by Baking a Special Cake.</h2>
-                            <p>Whenever there is something to celebrate the baking energy inside me starts erupting. The picture was took 4 years ago, I still remember I took a lot of effort on that cake because I want my father to have a Father’s Day he would never forget. <br/><br/>In August, 2023, the upcoming Father's Day has many kids in a bind, especially those who are having trouble choosing a gift. Yet, nothing is more heart warming than a self-made gift, so why don’t make it tastier?</p>
+                            {firstArticle===undefined?<h2></h2>:<h2>{JSON.parse(`"${firstArticle.title}"`)}</h2>}
+                            {firstArticle===undefined?<p></p>:<p>{JSON.parse(`"${firstArticle.intro}"`)}</p>}
                         </div>
                         <div className="cat_latest_header_link">
                             <div></div>
-                            <Link><p>view more</p></Link>
+                            {firstArticle===undefined?<></>:<Link to="/life/article" state={{id:firstArticle.id}}><p>view more</p></Link>}  
                         </div>
                     </div>
                     <div className="cat_latest_header_img">
-                        <img src={imgUrl} alt=""/>
+                        {firstArticle===undefined?<img src={imgUrl} alt=""/>:<img src={firstArticle.coverPicUrl.replace("media/image", "http://localhost:8080/images")} alt=""/>} 
                     </div>
                 </div>
                 <div className="cat_latest_item_section">
-                    <NineItems />
+                    <NineItems type={"highlight"} pageCount={pageCount} navigator={navigator}/>
                 </div>
                 <div className="cat_latest_page">
-                    <PageNext />
+                    <PageNext maxPage={maxPage} setPageCount={setPageCount}/>
                 </div>
                 <Footer background={"var(--color-cat-bg)"}/>
             </div>

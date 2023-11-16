@@ -3,23 +3,33 @@ import './itemN.css';
 import { BsThreeDots} from 'react-icons/bs';
 import { RiShareBoxLine, RiFileCopyLine } from 'react-icons/ri';
 import { motion } from 'framer-motion';
-import { Link } from "react-router-dom";
-import imgUrl from '../../../assets/postimg.jpeg';
 
-const ItemN = ({title, category, date, imgPath, postId}) => {
+const ItemN = ({title, category, date, imgPath, postId, navigator}) => {
     const [shareFocus, setShareFocus] = useState(false);
     const [copyFocus, setCopyFocus] = useState(false);
     const [moreShow, setMoreShow] = useState(false);
+    
+    const formattedDate = new Date(date).toLocaleDateString('en-TW', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        timeZone: 'Asia/Taipei',
+    });
+
+    const onClikHandler = () => {
+        navigator("/life/article", {state:{id:postId}});
+    }
+    
     const moreHandler = () => {
         setMoreShow(!moreShow);
     }
     return(
         <div className="cat_itemN">
             <div className="cat_itemN_img">
-                <img src={imgUrl} alt="cookie"/>
+                <img src={imgPath.replace("media/image","http://localhost:8080/images")} alt="cookie"/>
             </div>
             <div className="cat_itemN_title">
-                <p>Copyright©2023sjjjjjjjjjfdjskfljdskjfidsaojjjaklsjk</p>
+                <p onClick={onClikHandler}>{JSON.parse(`"${title}"`)}</p>
                 <BsThreeDots className="cat_itemN_icon" size={25} onClick={moreHandler}/>
                 {moreShow?<div className="cat_itemN_more">
                     <motion.div className="cat_itemN_more_item" 
@@ -38,10 +48,13 @@ const ItemN = ({title, category, date, imgPath, postId}) => {
             </div>
             <div className="cat_itemN_footer">
                 <div className="cat_itmeN_footer_cate">
-                    <Link to={"/life/category"} state={{category:"Baking"}} style={{textDecorationLine:"none", color:"var(--color-cat-theme)"}}><p>#Baking</p></Link>
-                    <Link to={"/life/category"} state={{category:"Life"}} style={{textDecorationLine:"none", color:"var(--color-cat-theme)"}}><p>#Life</p></Link>
+                    {category.map((category, index)=>(
+                        <div key={"cat_itmeN_footer_cate_"+index} style={{textDecorationLine:"none", color:"var(--color-cat-theme)"}}>
+                            <p key={"cat_itmeN_footer_cate_"+category.name+"_"+index}>#{category.name}</p>
+                        </div>
+                    ))}
                 </div>
-                <p>2023/08/02</p>
+                <p>{formattedDate}</p>
             </div>
         </div>
     )

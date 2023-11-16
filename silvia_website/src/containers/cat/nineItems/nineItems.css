@@ -6,9 +6,11 @@
     align-items: center;
 }
 
-.cat_nineItem_row {
+.cat_nineItem_wrapper {
+    width: 1020px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     align-items: center;
 }

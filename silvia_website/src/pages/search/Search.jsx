@@ -1,8 +1,7 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import './search.css';
 import { Navbar, TopBtn } from '../../components';
-import { SearchItem } from '../../components/home';
-import { Footer } from '../../containers';
+import { Footer, SearchResult } from '../../containers';
 import { useNavigate, useLocation } from "react-router-dom"; 
 import { PageNext } from '../../components/cat';
 
@@ -12,15 +11,34 @@ const Search = () => {
     const data = location.state;
     const [input, setInput] = useState("");
     const [keyword, setKeyword] = useState(data.keyword);
+    const [pageCount, setPageCount] = useState(0);
+    const [maxPage, setMaxPage] = useState(1);
+    const [emptyState, setEmptyState] = useState(false);
     const searchHandler = () => {
         if(input===" "){
             setKeyword("");
-            console.log("e")
         }
         else {
             setKeyword(input);
         }
     }
+    useEffect(()=>{
+        fetch("http://localhost:8080/article/search?keyword="+keyword+"&start=0&size=1", {method:"GET"})
+        .then((response)=>{
+            const headers = response.headers;
+            const count = headers.get("total-count");
+            if(count > 0){
+                setMaxPage(Math.ceil(count/7));
+                setEmptyState(false);
+            }
+            else {
+                setEmptyState(true);
+            }
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+    },[keyword])
     return(
         <div className="home_search">
             <TopBtn />
@@ -40,17 +58,10 @@ const Search = () => {
                 <h2 style={{visibility:keyword===""?"hidden":"visible"}}>The search result of: </h2>
                 <p style={{visibility:keyword===""?"hidden":"visible"}}>{keyword}</p>
             </div>
-            <div className="home_search_result">
-                <SearchItem />
-                <SearchItem />
-                <SearchItem />
-                <SearchItem />
-                <SearchItem />
-                <SearchItem />
-                <SearchItem />
-            </div>
+            {emptyState?<h1 className="no_article">No article yet...</h1>:<SearchResult keyword={keyword} pageCount={pageCount} navigator={navigator}/>}
+            
             <div style={{marginBottom:"8rem"}}>
-                <PageNext/>
+                <PageNext setPageCount={setPageCount} maxPage={maxPage}/>
             </div>
             <Footer />
         </div>

@@ -2,37 +2,40 @@ import React, {useState} from "react";
 import './pageNext.css';
 import {MdNavigateNext, MdNavigateBefore } from 'react-icons/md';
 
-const PageNext = () => {
-    const [preState, setPreState] = useState(false);
-    const [nextState, setNextState] = useState(true);
+const PageNext = ({maxPage, setPageCount}) => {
     const [atPage, setAtPage] = useState(1);
-
+    const [moveX, setMoveX] = useState(0);
+    
     const nextPageHandler = () => {
-        if(atPage<3){
+        if(atPage<maxPage){
+            if(atPage > 1){
+                setMoveX(moveX-70);
+            }
+            setPageCount(atPage);
             setAtPage(atPage+1);
         }
     }
     const prePageHandler = () => {
         if(atPage>1){
+            if(atPage>2){
+                setMoveX(moveX+70);
+            }
+            setPageCount(atPage-2);
             setAtPage(atPage-1);
         }
     }
 
     return(
         <div className="cat_page_next">
-            <MdNavigateBefore size={40} className="cat_page_next_" color={preState?"var(--color-cat-theme)":"#969696"} onClick={prePageHandler}/>
-            <div className="cat_page_next_numbers">
-                <div className="cat_page_next_number" style={{background:atPage===1?"var(--color-cat-theme)":"#ffffff00"}}>
-                    <p style={{color:atPage===1?"white":"var(--color-cat-theme)"}}>1</p>
-                </div>
-                <div className="cat_page_next_number" style={{background:atPage===2?"var(--color-cat-theme)":"#ffffff00"}}>
-                    <p style={{color:atPage===2?"white":"var(--color-cat-theme)"}}>2</p>
-                </div>
-                <div className="cat_page_next_number" style={{background:atPage===3?"var(--color-cat-theme)":"#ffffff00"}}>
-                    <p style={{color:atPage===3?"white":"var(--color-cat-theme)"}}>3</p>
+            <MdNavigateBefore style={atPage>1?{cursor:"pointer"}:{cursor:"default"}} size={40} className="cat_page_next_" color={atPage>1?"var(--color-cat-theme)":"#969696"} onClick={prePageHandler}/>
+            <div className="cat_page_next_numbers" >
+                <div className="cat_page_next_numbers_wrapper" style={{transform:`translateX(${moveX+"px"})`}}>
+                    {Array.from({length:maxPage}, (_, index)=>(
+                        <div key={"cat_page_next_number_"+index} className="cat_page_next_number" style={{background:atPage===index+1?"var(--color-cat-theme)":"#ffffff00", color:atPage===index+1?"white":"var(--color-cat-theme)"}}>{index+1}</div>
+                    ))}
                 </div>
             </div>
-            <MdNavigateNext size={40} className="cat_page_next_" color={nextState?"var(--color-cat-theme)":"#969696"} onClick={nextPageHandler}/>
+            <MdNavigateNext style={atPage<maxPage?{cursor:"pointer"}:{cursor:"default"}} size={40} className="cat_page_next_" color={atPage<maxPage?"var(--color-cat-theme)":"#969696"} onClick={nextPageHandler}/>
         </div>
     )
 }

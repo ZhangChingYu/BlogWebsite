@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 4rem;
+    padding: 0 4rem 4rem 4rem;
 }
 
 .cat_sectionB h2 {

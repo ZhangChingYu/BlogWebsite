@@ -28,7 +28,8 @@ const AddDialog = ({setAddShow}) => {
             .then((response) => response)
             .then((data) => {
                 console.log(data.ok);
-                setAddShow(false);})
+                setAddShow(false);
+            })
             .catch((err) => {
                 alert(err);
             });

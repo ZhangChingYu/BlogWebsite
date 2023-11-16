@@ -9,11 +9,11 @@ const Category = () => {
     const [curCateEdit, setCurCateEdit] = useState();
 
     useEffect(()=>{
-        console.log("e")
+        //console.log("e")
         fetch("http://localhost:8080/categories", {method:"GET"})
         .then((response) => response.json())
         .then((data) => {
-            console.log(data);
+            //console.log(data);
             setCateList(data);
         })
         .catch((err) => {
@@ -41,7 +41,7 @@ const Category = () => {
 
     return (
         <div className="admin_category">
-            { addShow?<AddDialog setAddShow={setAddShow} />:<></> }
+            { addShow?<AddDialog setAddShow={setAddShow}/>:<></> }
             { editShow? <EditDialog setEditShow={setEditShow} category={curCateEdit}/>:<></>}
             <div className="admin_category_addBtn" onClick={()=>{setAddShow(true)}}>
                 <p>Add New Category</p>

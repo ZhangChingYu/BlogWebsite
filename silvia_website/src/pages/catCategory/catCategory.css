@@ -22,3 +22,12 @@
     align-items: center;
     margin-bottom: 8rem;
 }
+
+.no_article {
+    width: 100%;
+    text-align: center;
+    margin: 4rem 0;
+    font-family: var(--font-family);
+    font-size: 40px;
+    color:grey;
+}

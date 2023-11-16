@@ -2,7 +2,7 @@ import React from "react";
 import "./adSectionC.css";
 
 const AddSectionC = ({section}) => {
-    const intro = section.intro.replace("\n","<br><br>")
+    const intro = section.intro.replaceAll("\n","<br><br>")
 
     return (
         <div className="admin_addArticle_preSecitonC">

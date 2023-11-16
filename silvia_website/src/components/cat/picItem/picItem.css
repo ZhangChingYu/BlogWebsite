@@ -11,7 +11,6 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background: var(--color-cat-bg);
 }
 
 .cat_picItem p.cat_picItem_discribtion { 

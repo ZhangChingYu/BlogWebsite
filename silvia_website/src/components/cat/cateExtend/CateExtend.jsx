@@ -3,7 +3,7 @@ import './cateExtend.css';
 import { Arrow } from '../../../components';
 import { motion } from 'framer-motion';
 
-const CateExtend = ({name, color, to}) => {
+const CateExtend = ({name, id, intro, color, to}) => {
     const [showBox, setShowBox] = useState(false);
     var mainColor = "var(--color-cat-theme)";
     if(color!==undefined){
@@ -16,10 +16,10 @@ const CateExtend = ({name, color, to}) => {
             </div>
             {showBox?<motion.div animate={{scale:showBox?1:0}} initial={{scale:0}} transition={{type:'spring', duration:0.6}} className="cat_extendItem_hideBox" >
                 <div className="cat_extendItem_hideBox_text">
-                    <p>Here I’ve share some of my personal experiences that I think might be helpful to someone that encountering similar situation. Welcome to check out on them!</p>
+                    <p>{intro}</p>
                 </div>
                 <div className="cat_extendItem_hideBox_btn">
-                    <Arrow category={name} color={mainColor} to={to}/>
+                    <Arrow category={name} cateId={id} color={mainColor} to={to}/>
                 </div>
             </motion.div>:<></>}
         </div>
