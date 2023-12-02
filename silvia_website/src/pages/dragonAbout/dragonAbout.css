@@ -1,0 +1,13 @@
+.dragon_about {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-dragon-theme);
+}
+
+.dragon_about_body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 8rem;
+}

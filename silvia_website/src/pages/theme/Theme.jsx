@@ -2,47 +2,30 @@ import React, {useState} from "react";
 import './theme.css';
 import { NavbarHover } from '../../components/dragon';
 import { TopBtn } from "../../components";
-import { Categories, DragonApp, DragonNotes, DragonWeb, Project, ComingSoon } from '../../subPage';
+//import { Categories, DragonApp, DragonNotes, DragonWeb, DragonUIUX, Project, ComingSoon } from '../../subPage';
+import { Categories, DragonApp, DragonNotes, DragonWeb, DragonUIUX, ComingSoon } from '../../subPage';
 import { Footer } from "../../containers";
 import { useLocation } from "react-router-dom";
 
-const DragonTheme = () => {
+const DragonTheme = () => { 
     const location = useLocation();
     const data = location.state;
     const [theme, setTheme] = useState(data.initTheme);
     let initPos=data.initPos;
     const showTheme = () => {
-        if(theme==="works"){
-            if(data.workTheme==="App"){
-                return(
-                    <DragonApp />
-                )
-            }
-            else if(data.workTheme==="Notes"){
-                return(
-                    <DragonNotes/>
-                )
-            }
-            else if(data.workTheme==='Website'){
-                return(
-                    <DragonWeb />
-                )
-            }
-        }
-        else if(theme==='category'){
-            return(
-                <Categories/>
-            )
-        }
-        else if(theme==='project'){
-            return(
-                <Project />
-            )
-        }
-        else{
-            return(
-                <ComingSoon />
-            )
+        switch(theme){
+            case "App":
+                return(<DragonApp />);
+            case "UI/UX":
+                return(<DragonUIUX/>);
+            case "Notes":
+                return(<DragonNotes/>);
+            case "Website":
+                return(<DragonWeb />);
+            case "category":
+                return(<Categories/>);
+            default:
+                return(<ComingSoon />);
         }
     }
     console.log(theme);

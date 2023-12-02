@@ -1,19 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './noteSection.css';
 import { NotesItem } from "../../../components/dragon";
-import imgUrl from '../../../assets/scale.png';
 
-const NoteSection = () => {
+const NoteSection = ({pageCount}) => {
+    const [articleList, setArticleList] = useState([]);
+
+    useEffect(()=>{
+        fetch("http://localhost:8080/article/category/18/"+pageCount+"/1", {method:"GET"})
+        .then((response)=>response.json())
+        .then((data)=>{
+            setArticleList(data);
+        })
+        .catch((err)=>{console.log(err);})
+    },[pageCount])
     return(
         <div className="dragon_noteSection">
-            <NotesItem Title={"How to build a React.js website"} Intro={"Countless website is build on React.js. Join me to learn how to do it."} Img={imgUrl} />
-            <NotesItem Title={"How to build a React.js website"} Intro={"Countless website is build on React.js. Join me to learn how to do it."} Img={imgUrl} />
-            <NotesItem Title={"How to build a React.js website"} Intro={"Countless website is build on React.js. Join me to learn how to do it."} Img={imgUrl} />
-            <NotesItem Title={"How to build a React.js website"} Intro={"Countless website is build on React.js. Join me to learn how to do it."} Img={imgUrl} />
-            <NotesItem Title={"How to build a React.js website"} Intro={"Countless website is build on React.js. Join me to learn how to do it."} Img={imgUrl} />
-            <NotesItem Title={"How to build a React.js website"} Intro={"Countless website is build on React.js. Join me to learn how to do it."} Img={imgUrl} />
-            <NotesItem Title={"How to build a React.js website"} Intro={"Countless website is build on React.js. Join me to learn how to do it."} Img={imgUrl} />
-            <NotesItem Title={"How to build a React.js website"} Intro={"Countless website is build on React.js. Join me to learn how to do it."} Img={imgUrl} />
+            {articleList.map((article,index)=>(
+                <NotesItem key={"dragon_noteSection_item_"+index} id={article.id} Title={article.title} Intro={article.intro} Img={article.coverPicUrl.replace("media/image","http://localhost:8080/images")} />
+            ))}
         </div>
     )
 }

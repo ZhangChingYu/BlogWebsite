@@ -108,6 +108,7 @@
     font-family: var(--font-family);
     color: var(--color-dragon-item);
     font-size: 16px;
+    cursor: pointer;
 }
 
 .whatsnew_container_card_r3:last-child {

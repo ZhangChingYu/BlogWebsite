@@ -59,6 +59,8 @@
 }
 
 .dragon_notesItem_img img {
-    height: 80%;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
+    box-shadow: var(--box-shadow);
 }

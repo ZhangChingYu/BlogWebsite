@@ -8,7 +8,7 @@
     justify-content: flex-start;
     align-items: center;
     height: 60px;
-    width: 400px;
+    width:600px;
     border-radius: 50px;
     background: var(--color-gradient-trans);
     box-shadow: var(--box-shadow);
@@ -39,7 +39,6 @@
 
 .dragon_hoverbar_link {
     flex: 1;
-    
     border-radius: 50px;
     height: 60px;
     display: flex;

@@ -1,14 +1,16 @@
 import React from "react";
 import './articleSection.css';
 
-const ArticleSection = ({Title, Img, Content}) => {
+const ArticleSection = ({section}) => {
     return(
         <div className="dragon_article_section">
-            <h2>{Title}</h2>
-            <p>{Content}</p>
-            {Img!==undefined?<div className="dragon_article_section_img">
-                <img src={Img} alt=""/>
-            </div>:<></>}
+            <h2>{section.title}</h2>
+            <p dangerouslySetInnerHTML={{__html:section.intro.replaceAll("\\n","<br>")}}></p>
+            {section.picList.map((image, index)=>(
+                <div key={"dragon_article_section_img_wrapper_"+index} className="dragon_article_section_img">
+                    <img key={"dragon_article_section_img_"+index} src={image.replace("media/image","http://localhost:8080/images")} alt=""/>
+                </div>
+            ))}
         </div>
     )
 }

@@ -54,7 +54,7 @@ const AddArticle = ({FooterHandler, state, setState, header, setHeader, sectionL
                 var data = {
                     "sectionType": sectionType[i]==="A"?1:sectionType[i]==="B"?2:3,
                     "title": sectionList[i].title,
-                    "intro": sectionList[i].title
+                    "intro": sectionList[i].intro
                 }
                 sectionData.push(data);
             }

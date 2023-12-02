@@ -8,10 +8,31 @@ import { Link, useNavigate } from "react-router-dom";
 const SearchItem = ({article}) => {
     const navigator = useNavigate()
     const onClikHandler = () => {
-        navigator("/life/article", { state: {id:article.id}});
+        if(article.categoryList[0].name==="Life"){
+            navigator("/life/article", { state: {id:article.id}});
+        }else if (article.categoryList[0].name==="Work"){
+            navigator("/work/article", { state: {id:article.id}});
+        }
+        
+    }
+    const categoryOnclick = (root, category) => {
+        if(root.id===1){
+            if(category.id===root.id){
+                navigator("/life");
+            }else {
+                navigator("/life/category", {state:{cateId:category.id, category:category.name}})
+            }
+        }else if(root.id===2){
+            if(category.id===root.id){
+                navigator("/work");
+            }
+            else {
+                navigator("/work/category", {state:{cateId:category.id, category:category.name}})
+            }
+        }
     }
     return(
-        <div className="home_search_item" onClick={onClikHandler}>
+        <div className="home_search_item">
             <div className="home_search_item_img">
                 {article===undefined?
                 <motion.img src={imgUrl} alt="" 
@@ -24,7 +45,7 @@ const SearchItem = ({article}) => {
             </div>
             <div className="home_search_item_content">
                 <div className="home_search_item_header">
-                    <p>{article===undefined?"Copyright©2023":JSON.parse(`"${article.title}"`)}</p>
+                    <p onClick={onClikHandler}>{article===undefined?"Copyright©2023":JSON.parse(`"${article.title}"`)}</p>
                     <BsThreeDots size={40} />
                 </div>
                 {article===undefined?
@@ -39,7 +60,7 @@ const SearchItem = ({article}) => {
                     </div>:
                     <div className="home_search_item_footer_cate">
                         {article.categoryList.map((category, index)=>(
-                            <p key={"cat_search_item_footer_cate_"+index}>#{category.name}</p>
+                            <p key={"cat_search_item_footer_cate_"+index} onClick={()=>{categoryOnclick(article.categoryList[0], category)}}>#{category.name}</p>
                         ))}
                     </div>}
                     <p>{article===undefined?"2023/08/02":new Date(article.date).toLocaleDateString('en-TW',{year:'numeric',month:'2-digit',day:'2-digit',timeZone:'Asia/Taipei'})}</p>

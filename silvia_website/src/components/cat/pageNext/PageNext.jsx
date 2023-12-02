@@ -27,7 +27,7 @@ const PageNext = ({maxPage, setPageCount}) => {
 
     return(
         <div className="cat_page_next">
-            <MdNavigateBefore style={atPage>1?{cursor:"pointer"}:{cursor:"default"}} size={40} className="cat_page_next_" color={atPage>1?"var(--color-cat-theme)":"#969696"} onClick={prePageHandler}/>
+            <MdNavigateBefore style={atPage>1?{cursor:"pointer"}:{cursor:"default"}} size={40} color={atPage>1?"var(--color-cat-theme)":"#969696"} onClick={prePageHandler}/>
             <div className="cat_page_next_numbers" >
                 <div className="cat_page_next_numbers_wrapper" style={{transform:`translateX(${moveX+"px"})`}}>
                     {Array.from({length:maxPage}, (_, index)=>(
@@ -35,7 +35,7 @@ const PageNext = ({maxPage, setPageCount}) => {
                     ))}
                 </div>
             </div>
-            <MdNavigateNext style={atPage<maxPage?{cursor:"pointer"}:{cursor:"default"}} size={40} className="cat_page_next_" color={atPage<maxPage?"var(--color-cat-theme)":"#969696"} onClick={nextPageHandler}/>
+            <MdNavigateNext style={atPage<maxPage?{cursor:"pointer"}:{cursor:"default"}} size={40} color={atPage<maxPage?"var(--color-cat-theme)":"#969696"} onClick={nextPageHandler}/>
         </div>
     )
 }

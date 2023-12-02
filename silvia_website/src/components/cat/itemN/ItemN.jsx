@@ -23,6 +23,12 @@ const ItemN = ({title, category, date, imgPath, postId, navigator}) => {
     const moreHandler = () => {
         setMoreShow(!moreShow);
     }
+
+    const categoryOnclick = (Category) => {
+        if(Category.id!==1){
+            navigator("/life/category", {state:{cateId:Category.id, category:Category.name}})
+        }
+    }
     return(
         <div className="cat_itemN">
             <div className="cat_itemN_img">
@@ -50,7 +56,7 @@ const ItemN = ({title, category, date, imgPath, postId, navigator}) => {
                 <div className="cat_itmeN_footer_cate">
                     {category.map((category, index)=>(
                         <div key={"cat_itmeN_footer_cate_"+index} style={{textDecorationLine:"none", color:"var(--color-cat-theme)"}}>
-                            <p key={"cat_itmeN_footer_cate_"+category.name+"_"+index}>#{category.name}</p>
+                            <p key={"cat_itmeN_footer_cate_"+category.name+"_"+index} onClick={()=>{categoryOnclick(category)}}>#{category.name}</p>
                         </div>
                     ))}
                 </div>

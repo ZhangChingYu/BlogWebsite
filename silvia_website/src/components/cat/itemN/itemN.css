@@ -81,6 +81,7 @@
     font-family: var(--font-cat);
     font-size: 14px;
     color: var(--color-cat-theme);
+    cursor: pointer;
 }
 
 .cat_itemN_more {

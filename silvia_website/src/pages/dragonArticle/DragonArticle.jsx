@@ -1,25 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './dragonArticle.css';
 import { Navbar, ArticleHeader, ArticleSection } from '../../containers/dragon';
 import { Footer } from '../../containers';
 import { TopBtn } from '../../components';
-import { useNavigate } from "react-router-dom";
-import headerImg from '../../assets/website.png';
-import demandImg from '../../assets/demandAnalysis.png';
-import updateImg from '../../assets/update.png';
+import { useLocation, useNavigate } from "react-router-dom";
+
 
 const DragonArticle = () => {
     const navigator = useNavigate();
-    return(
-        <div className="dragon_article">
-            <TopBtn />
-            <Navbar navigator={navigator}/>
-            <ArticleHeader Title={"Building My Personal Website"} Date={"2023/08/05"} Img={headerImg} Content={"In the starting point of building this website, I have to figure out a lot of new things. The first thing to do is to decide what the website is about. However, I can’t decide between a life sharing blog or a skill presenting platform. Therefore, I made my choice to do both. It feels a little bit like building two websites at once for example I’ve to design the web pages for two completely different themes and code them out."}/>
-            <ArticleSection Title={"Demand Analysis"} Img={demandImg} Content={"In the starting point of building this website, I have to figure out a lot of new things. The first thing to do is to decide what the website is about. However, I can’t decide between a life sharing blog or a skill presenting platform. Therefore, I made my choice to do both. It feels a little bit like building two websites at once for example I’ve to design the web pages for two completely different themes and code them out."}/>
-            <ArticleSection Title={"Progress Updates"} Img={updateImg} Content={"I'm still using Figma to design the user interface and expect to start programming in 10 days. I will be building a React.js website with a Django server."} />
-            <Footer background={"var(--color-dragon-theme)"} textColor={"white"} emailColor={"#FFF0A1"} Title={"Check Out My Github"}/>
-        </div>
-    )
+    const location = useLocation();
+    const id = location.state.id;
+    const [article, setArticle ] = useState(null);
+    useEffect(()=>{
+        fetch("http://localhost:8080/article/"+id)
+        .then((response)=>response.json())
+        .then((data)=>{
+            setArticle(data);
+        })
+        .catch((err)=>{console.log(err)});
+    },[id])
+    if(article!==null){
+        return(
+            <div className="dragon_article">
+                <TopBtn />
+                <Navbar navigator={navigator}/>
+                <ArticleHeader 
+                    Title={article.title} 
+                    Date={new Date(article.date).toLocaleDateString('en-TW', {year: 'numeric',month: '2-digit',day: '2-digit',timeZone: 'Asia/Taipei'})} 
+                    Img={article.coverImgUrl.replace("media/image","http://localhost:8080/images")} 
+                    Content={article.intro}
+                />
+                {article.sectionList.map((section,index)=>(
+                    <ArticleSection key={"dragon_article_section_"+index} section={section}/>
+                ))}
+                <Footer background={"var(--color-dragon-theme)"} textColor={"white"} emailColor={"#FFF0A1"} Title={"Check Out My Github"}/>
+            </div>
+        )
+    }
+    
 }
 
 export default DragonArticle;

@@ -7,7 +7,7 @@
     border-radius: 20px;
     margin-bottom: 2rem;
     background: white;
-    cursor: pointer;
+    cursor: default;
 }
 
 .home_search_item_img {
@@ -48,6 +48,11 @@
     color: black;
     text-decoration-line: underline;
     align-self: center;
+    cursor: pointer;
+}
+
+.home_search_item_header p:hover{
+    scale: 1.02;
 }
 
 .home_search_item_intro {
@@ -84,4 +89,5 @@
     margin-right: 6px;
     font-size: 15px;
     color: var(--color-cat-theme);
+    cursor: pointer;
 }

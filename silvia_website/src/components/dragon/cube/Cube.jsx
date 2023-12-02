@@ -2,13 +2,13 @@ import React, {useState} from "react";
 import './cube.css';
 import { motion } from "framer-motion";
 
-const Cube = ({Title, imgFile, Color, Weight, Top, clickhHandler}) => {
+const Cube = ({Title, Pos, imgFile, Color, Weight, Top, clickhHandler}) => {
     const [hover, setHover] = useState(false);
     return(
         <div className="dragon_cube" style={{background:Color, flex:Weight}}
         onPointerEnter={()=>{setHover(true)}}
         onPointerLeave={()=>{setHover(false)}}
-        onClick={()=>clickhHandler(Title)}>
+        onClick={()=>clickhHandler(Title, Pos)}>
             <h2>{Title}</h2>
             <div className="dragon_cube_img" style={{paddingTop:Top}}>
                 {imgFile!==undefined?

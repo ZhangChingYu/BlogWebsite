@@ -34,9 +34,9 @@
     padding-top: 1rem;
     border: 10px solid var(--color-cat-item);
     background-color: #FCF7ED;
-    opacity: 0.9;
     background-size: 8px 8px;
     background-image:  repeating-linear-gradient(to right, #FFECC6, #FFECC6 0.4px, #FCF7ED 0.4px, #FCF7ED);
+    overflow: scroll;
 }
 
 .admin_home_bar {

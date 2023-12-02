@@ -12,6 +12,22 @@ const WhatsNew = ({article}) => {
         day: '2-digit',
         timeZone: 'Asia/Taipei',
     });
+    const categoryOnclick = (root, category) => {
+        if(root.id===1){
+            if(category.id===root.id){
+                navigator("/life");
+            }else {
+                navigator("/life/category", {state:{cateId:category.id, category:category.name}})
+            }
+        }else if(root.id===2){
+            if(category.id===root.id){
+                navigator("/work");
+            }
+            else {
+                navigator("/work/category", {state:{cateId:category.id, category:category.name}})
+            }
+        }
+    }
     return(
         <div id="latest" className="whatsnew">
             <div className="whatsnew_title">
@@ -29,10 +45,10 @@ const WhatsNew = ({article}) => {
                     <div className="whatsnew_container_card_r3">
                         <div className="whatsnew_container_card_tag">
                             {article.categoryList.map((category, index)=>(
-                                <p key={"whatsnew_container_card_tag_"+index}>#{category.name}</p>
+                                <p key={"whatsnew_container_card_tag_"+index} onClick={()=>{categoryOnclick(article.categoryList[0],category)}}>#{category.name}</p>
                             ))}
                         </div>
-                        <Link to={"/life/article"} state={{id:article.id}} style={{textDecorationLine:"none", color:"#616161"}}><p>Read More</p></Link>
+                        <Link to={article.categoryList[0].name==="Life"?"/life/article":"/work/article"} state={{id:article.id}} style={{textDecorationLine:"none", color:"#616161"}}><p>Read More</p></Link>
                     </div>
                 </motion.div>
                 <div className="whatsnew_container_pic">

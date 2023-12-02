@@ -8,7 +8,7 @@ const ArticleHeader = ({Title, Date, Content, Img}) => {
             <ShareButton />
             <h2>{Title}</h2>
             <p className="dragon_article_header_date">{Date}</p>
-            <p>{Content}</p>
+            <p dangerouslySetInnerHTML={{__html:Content.replaceAll("\\n", "<br>")}}></p>
             {Img!==undefined?<div className="dragon_article_header_img">
                 <img src={Img} alt=""/>
             </div>:<></>}

@@ -8,35 +8,26 @@
 
 .dragon_menu_icon {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    cursor: pointer;
-}
-
-.dragon_menu_icon div {
-    background: radial-gradient(124.58% 136.70% at -45.83% -20.97%, #B8C2EF 0%, #9B6DB4 100%);
-    padding: 2px 16px;
-    margin:3px;
-    border-radius: 5px;
-}
-
-.dragon_menu_content {
-    top: 3.75rem;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction: row;
     align-items: center;
-    background: radial-gradient(124.58% 136.70% at -45.83% -20.97%, #B8C2EF 0%, #9B6DB4 100%);
-    padding: 0 2rem;
-    left: 0;
+    justify-content: flex-start;
+    cursor: pointer;
 }
 
-.dragon_menu_content p {
-    font-family: var(--font-cat);
-    font-size: 20px;
+.dragon_menu_icon_link {
     color: white;
-    margin: 0.4rem;
-    cursor: pointer;
+    margin: 10px;
+    font-family: var(--font-dragon);
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}
+
+.dragon_menu_icon_item{
+    margin: 2px;
+}
+
+.dragon_menu_icon_item:hover{
+    color: crimson;
 }

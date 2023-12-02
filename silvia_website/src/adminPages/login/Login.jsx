@@ -3,25 +3,49 @@ import { useState } from "react";
 import "./login.css";
 import ImgUrl from "../../assets/catbg.jpeg";
 import { useNavigate  } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { login } from "../../actions/authActions";
+//import store from "../../store";
 
 const Login = () => {
     const height = window.innerHeight;
     const width = window.innerWidth;
 
     const navigator = useNavigate();
+    const dispatch = useDispatch();
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [windowShow, setWindowShow] = useState(false);
+    
+    
+    function sendLoginRequest() {
+        fetch("http://localhost:8080/admin/login", 
+        {
+            method:"POST",
+            body: JSON.stringify({
+                "username":username,
+                "password":password
+            })
+        })
+        .then((response)=>{
+            const headers = response.headers;
+            const token = headers.get("Authorization");
+            const refreshToken = headers.get("Refresh-Token");
+            const expiration = headers.get("Access-Token-Expiration");
+            if(token.replace("Bearer ", '')!=="null"){
+                dispatch(login(token.replace("Bearer ", ''), refreshToken, expiration));
+                //console.log("store",store.getState().auth.expire);
+                navigator("/admin/home");
+                //打印結果: store – {isAuthenticated: true, user: "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdW5ueTEyMTguY2hhb…zMzV9"}
+            }
+        })
+        .catch((err)=>{setWindowShow(true)})
+    }
 
     const loginHandler = () => {
         if(!windowShow){
-            if(username === "sunny1218.chang@gmail.com" && password === "sunny1218") {
-                navigator("/admin/home");
-            }
-            else{
-                setWindowShow(true);
-            }
+            sendLoginRequest();
         }
     }
 

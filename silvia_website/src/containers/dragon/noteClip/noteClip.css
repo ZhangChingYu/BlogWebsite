@@ -13,18 +13,19 @@
 
 .dragon_noteClip_box {
     position: relative;
-    width: 90%;
+    width: 90vw;
     border-radius: 50px 50px 0px 0px;
     background: linear-gradient(135deg, #E1E7FF 0%, #F4E0FF 100%);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 600px;
+    height: 90vh;
     overflow-y: scroll;
 }
 
 .dragon_noteClip_btn {
+    position: fixed;
     align-self: flex-end;
     background-image: url('../../../assets/cancel.png');
     background-position: center;
@@ -56,6 +57,10 @@
     margin-bottom: 1rem;
 }
 
+.dragon_noteClip_box p.dragon_noteClip_header_intro {
+    margin-bottom: 40px;
+}
+
 .dragon_noteClip_box p.dragon_noteClip_box_date {
     font-size: 16px;
     color: #A9A9A9;
@@ -66,5 +71,23 @@
     width: auto;
 }
 
+.dragon_noteClip_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.dragon_noteClip_section h2 {
+    text-align: center;
+}
 
+.dragon_noteClip_section p {
+    margin-bottom: 40px;
+}
+
+.dragon_noteClip_section_img {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

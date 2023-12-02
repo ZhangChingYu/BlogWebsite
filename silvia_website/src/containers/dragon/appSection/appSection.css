@@ -1,15 +1,19 @@
 .dragon_appSection {
-    width: 100%;
+    width: 1200px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 4rem;
 }
 
 .dragon_appSection_col {
+    flex:1;
+    margin-left:14px;
+    margin-right: 14px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
