@@ -1,9 +1,0 @@
-.dragon_theme {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background: var(--color-dragon-theme);
-    padding-top: 8rem;
-}
