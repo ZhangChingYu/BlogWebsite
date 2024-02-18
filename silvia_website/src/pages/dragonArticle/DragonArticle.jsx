@@ -23,7 +23,7 @@ const DragonArticle = () => {
         return(
             <div className="dragon_article">
                 <TopBtn />
-                <Navbar navigator={navigator}/>
+                <Navbar navigator={navigator} isHome={false}/>
                 <ArticleHeader 
                     Title={article.title} 
                     Date={new Date(article.date).toLocaleDateString('en-TW', {year: 'numeric',month: '2-digit',day: '2-digit',timeZone: 'Asia/Taipei'})} 

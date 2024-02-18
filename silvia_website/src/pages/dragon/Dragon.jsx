@@ -10,7 +10,7 @@ const Dragon = () => {
     return(
         <div className="dragon">
             <TopBtn />
-            <Navbar navigator={navigator}/>
+            <Navbar navigator={navigator} isHome={true}/>
             <CubeSection />
             <Latest />
             <Footer background={"var(--color-dragon-theme)"} emailColor={"#FFF0A1"} textColor={"white"} Title={"Checkout My Github"}/>

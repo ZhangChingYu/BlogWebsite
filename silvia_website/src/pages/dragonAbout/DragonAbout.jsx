@@ -10,7 +10,7 @@ const DragonAbout = () =>{
     return(
         <div className="dragon_about">
             <TopBtn/>
-            <Navbar navigator={navigator}/>
+            <Navbar navigator={navigator} isHome={false}/>
             <div className="dragon_about_body">
                 about intro
             </div>

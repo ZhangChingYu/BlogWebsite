@@ -1,7 +1,8 @@
 import React from "react";
 import './navbar.css';
-import imgUrl from '../../assets/logo.png';
 import { motion } from "framer-motion";
+import Lottie from 'lottie-react';
+import Logo from '../../lottie/Logo 2.json';
 
 const Navbar = ({ navigator }) =>{
     return(
@@ -12,7 +13,9 @@ const Navbar = ({ navigator }) =>{
             transition={{duration:1, type:'tween'}} 
             initial={{top:-10}}
             onClick={()=>{navigator(-1)}}>
-                <motion.img src={imgUrl} alt="back to home"/>
+                <div style={{width:"100px", height:"100px", cursor:"pointer"}}>
+                    <Lottie animationData={Logo} loop={true}/>
+                </div>
             </motion.div>
         </div>
     )

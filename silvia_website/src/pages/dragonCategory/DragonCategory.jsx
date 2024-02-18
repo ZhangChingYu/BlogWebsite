@@ -33,7 +33,7 @@ const DragonCategory = () => {
     return(
         <div className="dragon_categroy_page">
             <TopBtn/>
-            <Navbar navigator={navigator}/>
+            <Navbar navigator={navigator} isHome={false}/>
             <div style={{marginBottom:"8rem"}}></div>
             <Header Theme={data.category+"."} Timeline={"2023 - Present"} showTimeline={!emptyState}/>
             {emptyState?<h1 style={{marginBottom:"10rem", fontSize:"30px", textAlign:"center", alignSelf:"center", fontFamily:"var(--font-family)", color:"white"}}>Under developing, welcome to check out other topic!</h1>

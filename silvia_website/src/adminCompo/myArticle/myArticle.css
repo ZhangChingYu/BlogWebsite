@@ -2,12 +2,7 @@
     margin: 0;
     padding: 0;
     display: flex;
-    background-color: white;
-}
-
-.admin_myarticle_item {
-    width: 100%;
-    display: flex;
     flex-direction: column;
-    background-color:var( --color-cat-bg);
+    justify-content: flex-start;
+    align-items: center;
 }

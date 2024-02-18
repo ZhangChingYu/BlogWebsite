@@ -10,17 +10,18 @@ const NavbarHover = ({themeHandler, initPos}) => {
     const positionShadow = "box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset";
     const [position, setPosition] = useState(initPos);
     const [openState, setOpenState] = useState(false);
+    const [hover, setHover] = useState(false);
     const clickHandler = (pos, theme) => {
         if(pos === 0){
             navigator("/work")
         }
         setPosition(pos);
-        themeHandler(theme);
+        themeHandler(theme); 
     }
     return (
         <motion.div className="dragon_hoverbar" animate={{width:openState?"600px":"60px"}} transition={{duration:0.3}}>
-            <div className="dragon_hoverbar_icon" onClick={()=>{setOpenState(!openState)}}>
-                <img src={iconImg} alt=""onClick={()=>{setOpenState(!openState)}}/>
+            <div className="dragon_hoverbar_icon" onClick={()=>{setOpenState(!openState)}} onPointerEnter={()=>{setHover(true)}} onPointerLeave={()=>{setHover(false)}}>
+                <motion.img animate={hover?{rotate:[0, 10, -10, 0]}:{}} transition={{type:"tween", duration:0.5}} src={iconImg} alt=""onClick={()=>{setOpenState(!openState)}}/>
             </div>
             <motion.div className="dargon_hoverbar_links" animate={{opacity:openState?1:0, display:openState?"flex":"none"}} transition={{delay:openState?0.1:0}}>
                 <motion.div className="dragon_hoverbar_link"

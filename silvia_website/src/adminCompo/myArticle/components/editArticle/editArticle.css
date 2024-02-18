@@ -1,0 +1,149 @@
+.admin_myArticle_edit {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin_myArticle_edit_choose {
+    background-color: white;
+    width: 50vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.admin_myArticle_edit_choose h2 {
+    font-family: var(--font-family);
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    cursor: default;
+}
+
+.admin_myArticle_edit_choose_cancel {
+    align-self:flex-end;
+    background-color: var(--color-cat-theme);
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.admin_myArticle_edit_choose_btns {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin_myArticle_edit_choose_btn {
+    background-color: var(--color-dragon-item);
+    font-family: var(--font-family);
+    padding: 20px;
+    width: 140px;
+    font-size: 24px;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    text-align: center;
+}
+
+.admin_myArticle_edit_choose_btn:hover{
+    background-color: var(--color-blue);
+    color:white;
+}
+
+.admin_myArticle_edit_form {
+    background-color: white;
+    width: 80vw;
+    height: 90vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px 0;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.admin_myArticle_edit_form_header {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-cat-theme);
+    align-items: center;
+    justify-content: center;
+}
+
+.admin_myArticle_edit_form input {
+    width: 600px;
+    font-family: var(--font-cat);
+    font-size: 24px;
+    line-height: 26px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: inset 0px 0px 9px 3px rgba(0, 0, 0, 0.25);
+    margin: 20px;
+    text-align: center;
+}
+
+.admin_myArticle_edit_form textarea {
+    width: 1000px;
+    font-family: var(--font-cat);
+    font-size: 20px;
+    line-height: 28px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 9px 3px rgba(0, 0, 0, 0.25);
+    margin: 20px;
+    padding: 10px;
+    text-align: left;
+}
+
+.admin_myArticle_edit_form_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-dragon-theme);
+}
+
+.admin_myArticle_edit_form_btns {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin_myArticle_edit_form_btns button {
+    font-family: var(--font-family);
+    font-size: 28px;
+    border: none;
+    background-color: var(--color-cat-item);
+    color: black;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 0 50px;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+}
+
+.admin_myArticle_edit_form_btns button:first-child {
+    background-color: var(--color-dragon-item);
+}

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import './navbar.css';
-import logoUrl from '../../../assets/logo.png';
 import { Search } from '../../../components/home';
 import { Link } from 'react-router-dom';
+import Lottie from 'lottie-react';
+import Logo from '../../../lottie/Logo 2.json';
 
 const Navbar = () => {
     const [searchContent, setSearchContent] = useState("");
@@ -10,7 +11,9 @@ const Navbar = () => {
     return(
         <div className="navbar">
             <div className="navbar_logo">
-                <img src={logoUrl} alt={"Silvia's Blog"}/>
+                <div style={{width:"40px", height:"40px"}}>
+                    <Lottie animationData={Logo} loop={true} />
+                </div>
             </div>
             <div className="navbar_content">
                 <p><a href="#theme">Get Started</a></p>

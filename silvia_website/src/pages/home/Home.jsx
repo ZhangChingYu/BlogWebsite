@@ -27,9 +27,6 @@ const Home = () => {
             <TopBtn />
             <Navbar />
             <Theme />
-            {
-                //<WhatsNew article={latestArticle}/><Subscribe />
-            }
             {latestArticle!==null?<WhatsNew article={latestArticle}/>:<></>}
             <Subscribe/>
             <GetInTouch />
