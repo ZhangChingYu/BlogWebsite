@@ -11,7 +11,6 @@
     font-size: 30px;
     color: white;
     text-align: center;
-    text-decoration-line: underline;
     margin-bottom: 2rem;
     width: 80%;
 }
@@ -21,10 +20,10 @@
     font-size: 20px;
     line-height: 30px;
     color: white;
-    text-align: center;
-    width: 80%;
+    text-align: left;
     max-width: 1200px;
     margin-bottom: 3rem;
+    width: 100%;
 }
 
 .dragon_article_section_img {
