@@ -19,7 +19,7 @@ const AppItem = ({Type, article}) => {
             onPointerEnter={()=>{setHover(true)}} onPointerLeave={()=>{setHover(false)}} 
             onClick={()=>{navigator('/work/article', {state:{id:article.id}})}}>
             <div className="dragon_appItem_header">
-                <h4>{JSON.parse(`"${article.title}"`)}</h4>
+                <h4 title={JSON.parse(`"${article.title}"`)}>{JSON.parse(`"${article.title}"`)}</h4>
             </div>
             <div className="dragon_appItem_body" style={{flexDirection:itemType?"column":"row"}}>
                 <div className="dragon_appItem_intro" style={itemType?{maxHeight:"110px", marginBottom:"40px"}:{}}>

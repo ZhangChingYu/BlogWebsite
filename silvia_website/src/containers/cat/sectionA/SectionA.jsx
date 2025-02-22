@@ -3,11 +3,10 @@ import './sectionA.css';
 import { PictureItem } from '../../../components/cat';
 
 const SectionA = ({section}) => {
-    const intro = section.intro.replaceAll("\\"+"n","<br>")
     return(
         <div className="cat_sectionA">
             <h2>{JSON.parse(`"${section.title}"`)}</h2>
-            <p dangerouslySetInnerHTML={{ __html: intro}}></p>
+            <p dangerouslySetInnerHTML={{__html:JSON.parse(`"${section.intro.replaceAll("\\"+"n","<br>")}"`)}}></p>
             <div className="cat_sectionA_wrapper">
                 {section.picList.map((image, index)=>(
                     <div key={"cat_sectionA_wrapper_"+index} style={{width:"48%"}}>

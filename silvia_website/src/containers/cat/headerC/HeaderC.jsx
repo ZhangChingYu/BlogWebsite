@@ -18,7 +18,7 @@ const HeaderC = ({title, date, intro, cover}) => {
                     <ShareButton iconColor={"white"}/>
                 </div>
                 <h2>{JSON.parse(`"${title}"`)}</h2>
-                <p dangerouslySetInnerHTML={{ __html: i }}></p>
+                <p dangerouslySetInnerHTML={{ __html: JSON.parse(`"${i}"`) }}></p>
             </div>
         </div>
     )

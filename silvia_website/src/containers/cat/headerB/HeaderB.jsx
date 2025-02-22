@@ -19,7 +19,7 @@ const HeaderB = ({title, date, intro, cover}) => {
                 <ShareButton />
                 <h2>{JSON.parse(`"${title}"`)}</h2>
                 <p className="cat_header_content_date">{formattedDate}</p>
-                <p dangerouslySetInnerHTML={{ __html: i }}></p>
+                <p dangerouslySetInnerHTML={{ __html: JSON.parse(`"${i}"`) }}></p>
             </div>
         </div>
     )
