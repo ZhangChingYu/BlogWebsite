@@ -28,7 +28,7 @@
     flex: 1;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: flex-start;
 }
 
@@ -71,6 +71,30 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.theme_cat_btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    height: 20rem;
+    min-width: 5rem;
+    align-self: flex-end;
+}
+
+.theme_cat_btn p{
+    background-color: white;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-family: var(--font-family);
+}
+
+.theme_cat_btn p:hover{
+    transition: all ease-out .1s;
+    scale: 1.02;
 }
 
 .theme_cat_text {
