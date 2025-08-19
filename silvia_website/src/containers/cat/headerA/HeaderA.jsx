@@ -15,7 +15,7 @@ const HeaderA = ({title, date, intro, cover}) => {
             <ShareButton />
             <h2>{JSON.parse(`"${title}"`)}</h2>
             <p className="cat_headerA_date">{formattedDate}</p>
-            <p dangerouslySetInnerHTML={{ __html: i }}></p>
+            <p dangerouslySetInnerHTML={{ __html: JSON.parse(`"${i}"`) }}></p>
             <div className="cat_headerA_img">
                 <img src={cover.replace("media/image","http://localhost:8080/images")} alt=""/>
             </div>

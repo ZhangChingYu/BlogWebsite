@@ -50,7 +50,7 @@ const SearchItem = ({article}) => {
                 </div>
                 {article===undefined?
                 <p className="home_search_item_intro">Here I’ve share some of my personal experiences that I think might be helpful to someone that encountering similar situation. Welcome to check out on them!</p>:
-                <p className="home_search_item_intro" >{JSON.parse(`"${article.intro}"`)}</p>}
+                <p className="home_search_item_intro">{JSON.parse(`"${article.intro}"`)}</p>}
                 
                 <div className="home_search_item_footer">
                     {article===undefined?

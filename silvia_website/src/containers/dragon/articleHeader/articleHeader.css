@@ -11,8 +11,9 @@
     font-family: var(--font-family);
     font-size: 40px;
     color: white;
-    text-decoration-line: underline;
-    max-width: 500px;
+    border-bottom: 2px dashed white;
+    min-width: 500px;
+    width: 70%;
     text-align: center;
     margin-bottom: 2rem;
 }

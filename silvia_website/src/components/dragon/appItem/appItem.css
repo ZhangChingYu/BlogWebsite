@@ -25,6 +25,8 @@
     font-size: 20px;
     color: var(--color-purple);
     margin-right: 1rem;
+    height: 60px;
+    overflow: hidden;
 }
 
 .dragon_appItem_body {

@@ -33,5 +33,11 @@
     font-family: var(--font-family);
     font-size: 20px;
     color: black;
+    cursor: pointer;
+}
+
+.cat_article_navbar_links p:hover {
+    color: var(--color-cat-theme);
+    transform: scale(0.95) ;
 }
 

@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 
 const WhatsNew = ({article}) => {
+    console.log(article);
     const navigator = useNavigate();
     const formattedDate = new Date(article.date).toLocaleDateString('en-TW', {
         year: 'numeric',
@@ -28,6 +29,13 @@ const WhatsNew = ({article}) => {
             }
         }
     }
+    const titleOnclike = (root, id) => {
+        if(root === 1) {
+            navigator("/life/article", {state:{id:id}});
+        } else if(root === 2) {
+            navigator("/work/article", {state:{id:id}});
+        }
+    }
     return(
         <div id="latest" className="whatsnew">
             <div className="whatsnew_title">
@@ -36,7 +44,7 @@ const WhatsNew = ({article}) => {
             <div className="whatsnew_container">
                 <motion.div className="whatsnew_container_card" animate={{marginTop:"-2rem"}} transition={{duration:2, type:"tween"}} >
                     <div className="whatsnew_container_card_r1">
-                        <h2 onClick={()=>{navigator("/life/article", { state:{id:article.id}})}}>{JSON.parse(`"${article.title}"`)}</h2>
+                        <h2 onClick={()=>{titleOnclike(article.categoryList[0].id, article.id)}}>{JSON.parse(`"${article.title}"`)}</h2>
                         <p>{formattedDate}</p>
                     </div>
                     <div className="whatsnew_container_card_r2">

@@ -19,6 +19,7 @@ const DragonArticle = () => {
         })
         .catch((err)=>{console.log(err)});
     },[id])
+    
     if(article!==null){
         return(
             <div className="dragon_article">
@@ -37,7 +38,6 @@ const DragonArticle = () => {
             </div>
         )
     }
-    
 }
 
 export default DragonArticle;
