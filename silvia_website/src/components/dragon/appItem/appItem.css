@@ -1,0 +1,67 @@
+.dragon_appItem {
+    width: 360px;
+    background: white;
+    margin: 14px;
+    border-radius: 20px;
+    padding: 20px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    cursor: pointer;
+    overflow-y: hidden;
+}
+
+.dragon_appItem_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.dragon_appItem_header h4 {
+    font-family: var(--font-family);
+    font-size: 20px;
+    color: var(--color-purple);
+    margin-right: 1rem;
+    height: 60px;
+    overflow: hidden;
+}
+
+.dragon_appItem_body {
+    width: 100%;
+    flex:1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.dragon_appItem_intro {
+    flex:1;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 130px;
+}
+
+.dragon_appItem_intro p {
+    font-family: var(--font-cat);
+    font-size: 16px;
+    color:black;
+}
+
+.dragon_appItem_img {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.dragon_appItem_img img {
+    height: 100%;
+}

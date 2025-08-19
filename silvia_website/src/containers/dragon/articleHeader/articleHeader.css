@@ -1,0 +1,51 @@
+.dragon_article_header {
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dragon_article_header h2 {
+    font-family: var(--font-family);
+    font-size: 40px;
+    color: white;
+    border-bottom: 2px dashed white;
+    min-width: 500px;
+    width: 70%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.dragon_article_header p {
+    font-family: var(--font-dragon);
+    font-size: 20px;
+    color: white;
+    line-height: 30px;
+    text-align: center;
+    width: 70%;
+    max-width: 1400px;
+    margin-bottom: 3rem;
+}
+
+.dragon_article_header p.dragon_article_header_date {
+    font-family: var(--font-cat);
+    font-size: 16px;
+    color: #A5A5A5;
+    margin-bottom: 1rem;
+}
+
+.dragon_article_header_img {
+    width: 80%;
+    height: 512px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dragon_article_header_img img {
+    height: 100%;
+}

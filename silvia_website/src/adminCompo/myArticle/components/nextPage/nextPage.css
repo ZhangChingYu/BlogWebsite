@@ -1,0 +1,68 @@
+.admin_myArticle_page{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    cursor: default;
+    font-family: var(--font-cat);
+    background-color: white;
+    border-radius: 50px;
+}
+
+.admin_myArticle_page_pre {
+    height: 50px;
+    width: 60px;
+    border-radius: 50px;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.admin_myArticle_page_next {
+    height: 50px;
+    width: 60px;
+    border-radius: 50px;
+    color:white;
+    background-color: var(--color-dragon-theme);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.admin_myArticle_page_numbers {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 210px;
+    overflow: hidden;
+}
+
+.admin_myArticle_page_numbers_wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 210px;
+}
+
+.admin_myArticle_page_number{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 50%;
+    margin: 0 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--color-dragon-theme)
+}
