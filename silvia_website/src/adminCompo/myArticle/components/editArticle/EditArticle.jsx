@@ -8,7 +8,7 @@ const EditArticle = ({id, closeHandler}) => {
 
     function editHandler(){
         setChoose("edit");
-        fetch("http://localhost:8080/article/"+id, {method:"GET"})
+        fetch(`${process.env.REACT_APP_API_URL}/article/${id}`, {method:"GET"})
         .then((response)=>response.json())
         .then((data)=>{
             setArticle(data);
@@ -29,7 +29,7 @@ const EditArticle = ({id, closeHandler}) => {
         const intro = formData.get("intro");
         // pack section list
         
-        fetch("http://localhost:8080/article", {
+        fetch(`${process.env.REACT_APP_API_URL}/article`, {
             method:"PUT",
             body: JSON.stringify({
                 "id":article.id,

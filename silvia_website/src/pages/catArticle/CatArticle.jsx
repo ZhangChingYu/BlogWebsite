@@ -12,7 +12,7 @@ const CatArticle = () => {
     const [article, setArticle] = useState(null);
     const data = location.state;
     useEffect(()=>{
-        fetch("http://localhost:8080/article/"+data.id, {method:"GET"})
+        fetch(`${process.env.REACT_APP_API_URL}/article/${data.id}`, { method: "GET" })
         .then((response) => response.json())
         .then((data) => {
             //console.log(data)

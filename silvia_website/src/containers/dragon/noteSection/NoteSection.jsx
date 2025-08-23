@@ -6,7 +6,7 @@ const NoteSection = ({pageCount}) => {
     const [articleList, setArticleList] = useState([]);
 
     useEffect(()=>{
-        fetch("http://localhost:8080/article/category/18/"+pageCount+"/1", {method:"GET"})
+        fetch(`${process.env.REACT_APP_API_URL}/article/cateogory/18/${pageCount}/1`, {method:"GET"})
         .then((response)=>response.json())
         .then((data)=>{
             setArticleList(data);

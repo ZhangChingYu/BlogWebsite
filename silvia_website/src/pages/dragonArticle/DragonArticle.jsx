@@ -12,7 +12,7 @@ const DragonArticle = () => {
     const id = location.state.id;
     const [article, setArticle ] = useState(null);
     useEffect(()=>{
-        fetch("http://localhost:8080/article/"+id)
+        fetch(`${process.env.REACT_APP_API_URL}/article/${id}`)
         .then((response)=>response.json())
         .then((data)=>{
             setArticle(data);

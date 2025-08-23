@@ -8,7 +8,7 @@ const DragonWeb = () => {
     const [maxPage, setMaxPage] = useState(1);
     const [emptyState, setEmptyState] = useState(false);
     useEffect(()=>{
-        fetch("http://localhost:8080/article/category/15/0/1", {method:"GET"})
+        fetch(`${process.env.REACT_APP_API_URL}/article/category/15/0/1`, {method:"GET"})
         .then((response)=>{
             const headers = response.headers;
             const count = headers.get("total-count");

@@ -12,7 +12,7 @@ const Cat = () =>{
     const [categories, setCategories] = useState([]);
 
     useEffect(()=>{
-        fetch("http://localhost:8080/article/3/latest/life", { method:"GET" })
+        fetch(`${process.env.REACT_APP_API_URL}/article/3/latest/life`, { method: "GET" })
         .then((response) => response.json())
         .then((data) => {
             //console.log("Latest:",data);
@@ -21,7 +21,7 @@ const Cat = () =>{
         .catch((err)=>{
             console.log(err);
         })
-        fetch("http://localhost:8080/article/3/highlight/life", { method:"GET" })
+        fetch(`${process.env.REACT_APP_API_URL}/article/3/highlight/life`, { method: "GET" })
         .then((response) => response.json())
         .then((data) => {
             //console.log("Highlight:", data);
@@ -30,7 +30,7 @@ const Cat = () =>{
         .catch((err)=>{
             console.log(err);
         })
-        fetch("http://localhost:8080/categories/1", {method:"GET"})
+        fetch(`${process.env.REACT_APP_API_URL}/categories/1`, { method: "GET" })
         .then((response)=>response.json())
         .then((data) => {
             setCategories(data);

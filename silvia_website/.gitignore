@@ -25,3 +25,4 @@ yarn-error.log*
 /bin/
 .DS_Store
 .idea/
+.env

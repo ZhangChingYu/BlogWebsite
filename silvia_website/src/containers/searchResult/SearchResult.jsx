@@ -6,7 +6,7 @@ const SearchResult = ({keyword, pageCount, navigator}) => {
     const [articleList, setArticleList] = useState([]);
 
     useEffect(()=>{
-        fetch("http://localhost:8080/article/search?keyword="+keyword+"&start="+(pageCount*7)+"&size=7", {method:"GET"})
+        fetch(`${process.env.REACT_APP_API_URL}/article/search?keywork=${keyword}&start=${pageCount*7}&size=7`, {method: "GET"})
         .then((response)=>response.json())
         .then((data)=>{
             //console.log(data);

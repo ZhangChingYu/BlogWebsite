@@ -6,7 +6,7 @@ const AppSection = ({pageCount}) => {
     const [articleList, setArticleList] = useState([]);
 
     useEffect(()=>{
-        fetch("http://localhost:8080/article/category/4/"+(pageCount*9)+"/9", {method:"GET"})
+        fetch(`${process.env.REACT_APP_API_URL}/article/category/4/${pageCount*9}/9`, {method:"GET"})
         .then((response)=>response.json())
         .then((data)=>{
             setArticleList(data);

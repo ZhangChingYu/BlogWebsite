@@ -10,7 +10,7 @@ const CatCategories = () => {
     const navigator = useNavigate();
     const [categories, setCategories] = useState([]);
     useEffect(()=>{
-        fetch("http://localhost:8080/categories/1", {method:"GET"})
+        fetch(`${process.env.REACT_APP_API_URL}/categories/1`, {method: "GET"})
         .then((response) => response.json())
         .then((data) => {
             //console.log(data);

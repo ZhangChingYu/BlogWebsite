@@ -20,7 +20,7 @@ const Login = () => {
     
     
     function sendLoginRequest() {
-        fetch("http://localhost:8080/admin/login", 
+        fetch(`${process.env.REACT_APP_API_URL}/admin/login`,
         {
             method:"POST",
             body: JSON.stringify({

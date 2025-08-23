@@ -25,7 +25,7 @@ const AddArticle = ({FooterHandler, state, setState, header, setHeader, sectionL
     }
 
     function SubmitArticleHandler (categories) {
-        fetch("http://localhost:8080/article", { method:"POST",
+        fetch(`${process.env.REACT_APP_API_URL}/article`, { method:"POST",
         body: PackArticleData(categories)
         })
         .then((response)=> response)
@@ -67,7 +67,7 @@ const AddArticle = ({FooterHandler, state, setState, header, setHeader, sectionL
     const uploadPicture = (picture, path) => {
         const reader = new FileReader();
         reader.onload = function() {
-            fetch("http://localhost:8080/images/upload/"+path, {
+            fetch(`${process.env.REACT_APP_API_URL}/images/upload/${path}`, {
                 method:"POST",
                 body: picture
             })

@@ -9,7 +9,7 @@ const Home = () => {
     const [latestArticle, setLatestArticle] = useState(null);
     
     useEffect(()=>{
-        fetch("http://localhost:8080/article/latest", {method:"GET"})
+        fetch(`${process.env.REACT_APP_API_URL}/article/latest`, {method:"GET"})
         .then((response) => response.json())
         .then((data) => {
             if(latestArticle===null){

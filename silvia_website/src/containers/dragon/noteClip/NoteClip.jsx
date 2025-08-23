@@ -4,7 +4,7 @@ import './noteClip.css';
 const NoteClip = ({id, clickHandler}) => {
     const [article, setArticle] = useState(null);
     useEffect(()=>{
-        fetch("http://localhost:8080/article/"+id, {method:"GET"})
+        fetch(`${process.env.REACT_APP_API_URL}/article/${id}`, {method:"GET"})
         .then((response)=>response.json())
         .then((data)=>{
             console.log(data);

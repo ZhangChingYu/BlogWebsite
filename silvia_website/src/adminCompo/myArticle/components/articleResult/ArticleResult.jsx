@@ -4,7 +4,7 @@ import "./articleResult.css";
 const ArticleResult = ({pageCount, setId}) => {
     const [articleList, setArticleList] = useState([]);
     useEffect(()=>{
-        fetch("http://localhost:8080/article/all/"+(pageCount*10)+"/10")
+        fetch(`${process.env.REACT_APP_API_URL}/article/all/${pageCount*10}/10`)
         .then((response)=>response.json())
         .then((data)=>{
             setArticleList(data);

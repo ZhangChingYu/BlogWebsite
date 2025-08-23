@@ -6,7 +6,7 @@ const CategoryResult = ({cateId, pageCount, navigator}) => {
     const [articleList, setArticleList] = useState([]);
 
     useEffect(()=>{
-        fetch("http://localhost:8080/article/category/"+cateId+"/"+(pageCount*6)+"/6", { method: "GET" })
+        fetch(`${process.env.REACT_APP_API_URL}/article/category/${cateId}/${pageCount*6}/6`, {method:"GET"})
         .then((response)=>response.json())
         .then((data)=>{
             setArticleList(data);

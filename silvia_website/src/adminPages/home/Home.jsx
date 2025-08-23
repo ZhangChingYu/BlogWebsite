@@ -14,7 +14,7 @@ const Home = () => {
     const refreshToken = useCallback(() => {
         // 獲取新的Token
         console.log(store.getState().auth.refresh);
-        fetch("http://localhost:8080/admin/token/refresh", {
+        fetch(`${process.env.REACT_APP_API_URL}/admin/token/refresh`, {
             method:"POST",
             headers:{
                 "Authorization":store.getState().auth.refresh
@@ -132,7 +132,7 @@ const Home = () => {
     }
 
     const barStateChange = (state) => {
-        fetch("http://localhost:8080/admin/checkAuth",{
+        fetch(`${process.env.REACT_APP_API_URL}/admin/checkAuth`,{
             method:"POST",
             headers:{
                 "Authorization":store.getState().auth.token

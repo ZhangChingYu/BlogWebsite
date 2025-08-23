@@ -5,7 +5,7 @@ import { ItemN } from '../../../components/cat';
 const NineItems = ({type, pageCount, navigator}) => {
     const [articleList, setArticleList] = useState([]);
     useEffect(()=>{
-        fetch("http://localhost:8080/article/"+type+"/1/"+(pageCount*9)+"/9", {method:"GET"})
+        fetch(`${process.env.REACT_APP_API_URL}/article/${type}/1/${pageCount*9}/9`, {method:"GET"})
         .then((response) => response.json())
         .then((data)=>{
             setArticleList(data);

@@ -10,7 +10,7 @@ const Category = () => {
 
     useEffect(()=>{
         //console.log("e")
-        fetch("http://localhost:8080/categories", {method:"GET"})
+        fetch(`${process.env.REACT_APP_API_URL}/categories`, {method:"GET"})
         .then((response) => response.json())
         .then((data) => {
             //console.log(data);
@@ -23,7 +23,7 @@ const Category = () => {
 
     const DeleteHandler = (id) => {
         if(id !== null){
-            fetch("http://localhost:8080/categories/"+id, 
+            fetch(`${process.env.REACT_APP_API_URL}/categories/${id}`, 
             {
                 method: 'DELETE'
             })

@@ -19,7 +19,7 @@ const AddDialog = ({setAddShow}) => {
         if(name === "" || intro === "") {
             alert("You must fill in every blank!");
         }else{
-            fetch("http://localhost:8080/categories", { method:"POST", 
+            fetch(`${process.env.REACT_APP_API_URL}/categories`, { method:"POST", 
             body: JSON.stringify({
                 "name":name, 
                 "intro":intro, 

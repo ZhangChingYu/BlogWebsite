@@ -18,7 +18,7 @@ const EditDialog = ({setEditShow, category}) => {
         if(name===category.name && intro===category.intro){
             alert("Nothing has changed.");
         }else{
-            fetch("http://localhost:8080/categories", {
+            fetch(`${process.env.REACT_APP_API_URL}/categories`, {
                 method:"PUT",
                 body: JSON.stringify({
                     "id":category.id,

@@ -6,7 +6,7 @@ import { CateExtend } from "../../components/cat";
 const Categories = () => {
     const [categoryList, setCategoryList] = useState([]);
     useEffect(()=>{
-        fetch("http://localhost:8080/categories/2", {method:"GET"})
+        fetch(`${process.env.REACT_APP_API_URL}/categories/2`, {method: "GET"})
         .then((response)=>response.json())
         .then((data)=>{
             //console.log(data);

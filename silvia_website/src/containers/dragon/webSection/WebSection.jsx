@@ -5,7 +5,7 @@ import { AppItem } from "../../../components/dragon";
 const WebSection = ({pageCount}) =>{
     const [articleList, setArticleList] = useState([]);
     useEffect(()=>{
-        fetch("http://localhost:8080/article/category/15/"+pageCount+"/9", {method:"GET"})
+        fetch(`${process.env.REACT_APP_API_URL}/article/category/15/${pageCount}/9`, {method: "GET"})
         .then((response)=>response.json())
         .then((data)=>{
             setArticleList(data);

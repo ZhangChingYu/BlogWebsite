@@ -9,7 +9,7 @@ const Latest = () => {
     const [hover, setHover] = useState(false);
     const navigator = useNavigate()
     useEffect(()=>{
-        fetch("http://localhost:8080/article/work/latest", {method:"GET"})
+        fetch(`${process.env.REACT_APP_API_URL}/article/work/latest`, {method:"GET"})
         .then((response)=>response.json())
         .then((data)=>{
             setLatest(data);

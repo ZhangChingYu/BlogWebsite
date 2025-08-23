@@ -10,7 +10,7 @@ const CateSelect = ({ submitPictureHandler, submitArticleHandler, theme}) => {
     const [okState, setOkState] = useState(true);
     const [dialogShow, setDialogShow] = useState(false);
     useEffect(()=>{
-        const url = "http://localhost:8080/categories/"+(theme?1:2);
+        const url = `${process.env.REACT_APP_API_URL}/categories/${theme?1:2}`;
         fetch(url, {method:"GET"})
         .then((response) => response.json())
         .then((data) => {
